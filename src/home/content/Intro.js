@@ -72,12 +72,12 @@ function FirstContent() {
     const Rpara = {
         color: "#fff",
         padding: "5%",
-        fontSize: "3rem",
+        fontSize: "2.3rem",
     }
     const Rbar = {
         borderColor: "#fff",
         height: "2px",
-        width: "500px",
+        width: "60%",
         backgroundColor: "#fff",
         borderRadius: "20px",
         position: "relative",
