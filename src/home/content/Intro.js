@@ -78,7 +78,7 @@ function FirstContent() {
                     <button style={btn2}>Calculer le coût</button>
                 </div>
             </div>
-
+            <div></div>
         </div>
     )
 }
