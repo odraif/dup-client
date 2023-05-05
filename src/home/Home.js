@@ -1,11 +1,17 @@
 import FirstContent from "./content/Intro";
 import NavBar from "./nav/Navbar";
 
-function Home(){
-    return(
+function Home() {
+    return (
         <>
-            <NavBar></NavBar>
-            <FirstContent></FirstContent>
+            <div>
+                <div>
+                    <NavBar></NavBar>
+                </div>
+                <div className="introCentre">
+                    <FirstContent></FirstContent>
+                </div>
+            </div>
         </>
     )
 }
