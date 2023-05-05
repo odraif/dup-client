@@ -1,5 +1,5 @@
  .logo{
-    width: 40px;
+    width: 60px;
     float: left;
  }
  body {
@@ -21,7 +21,7 @@
  }
 
  /* Style the links inside the navigation bar */
- .topnav a {
+ .topnav .menu {
      float: right;
      display: block;
      color:  rgb(175, 173, 173);
@@ -33,7 +33,7 @@
  }
 
  /* Change the color of links on hover */
- .topnav a:hover {
+ .topnav .menu:hover {
      backdrop-filter: blur(10px);
      color: #f2f2f2;
  }
@@ -55,13 +55,17 @@
 }
 
  @media screen and (max-width: 600px) {
-     .topnav a:not(:first-child) {
+     .topnav .menu:not(:first-child) {
          display: none;
      }
 
      .topnav .icon {
          float: right;
          display: block;
+     }
+     .logo{
+        width: 40px;
+
      }
  }
 
@@ -86,7 +90,7 @@
         display: block;
         text-align: left;
     }
-     .topnav.responsive a {
+     .topnav.responsive .menu {
          float: none;
          display: block;
          text-align: left;

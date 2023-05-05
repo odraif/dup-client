@@ -20,6 +20,7 @@
     flex-direction: row;
     width: 80%;
     margin-top: 5%!important;
+    height: 100dvh;
 }
 @media (max-width:900px) {
     .introBar {

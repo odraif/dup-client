@@ -12,7 +12,7 @@ export default function FirstContent() {
                     l’engagement avec votre  client.</p>
             </div>
             <div className="introBtn">
-                <Button variant="contained" className="m-auto" style={{ margin: "10px",padding:"10px 20px", minWidth: "200px", backgroundColor: "#fff", color: "#1f597e", fontWeight: "bold" }}> Nos projet</Button>
+                <Button variant="contained" className="m-auto" style={{ margin: "10px",padding:"10px 20px", minWidth: "200px", backgroundColor: "#fff", color: "#041560", fontWeight: "bold" }}> Nos projet</Button>
                 <Button variant="outlined" style={{ borderColor: "#fff", color: "#fff",padding:"10px 20px", margin: "10px", minWidth: "200px", fontWeight: "bold" }}> Calculer le coût</Button>
             </div>
         </div >

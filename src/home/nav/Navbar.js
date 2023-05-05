@@ -17,11 +17,13 @@ function NavBar() {
             <header>
                 <nav>
                     <div className="topnav" id="myTopnav">
+                    <Link to="" >
                         <img src={logo} alt="" className="logo" />
-                        <Link to="" className="active">Contact</Link>
-                        <Link to="">Calculateur</Link>
-                        <Link to="">A props</Link>
-                        <Link to="">About us</Link>
+                    </Link>
+                        <Link to="" className="menu">Contact</Link>
+                        <Link to="" className="menu">Calculateur</Link>
+                        <Link to="" className="menu">A props</Link>
+                        <Link to="" className="menu">About us</Link>
                         <button className="icon" onClick={myFunction}>
                             <MenuIcon></MenuIcon>
                         </button>
