@@ -26,7 +26,7 @@
     min-width: 100%; 
     min-height: 100%;
     user-select: none;
-    
+    translate: 200ms;
   }
 @media (max-width:900px) {
     .introCentre {
@@ -35,7 +35,16 @@
     .introBtn {
         margin-top: 20px;
         width: 100%;
+
     }
+    .introCentre img {
+        padding-right: 10px;
+        width: 100%;
+        z-index: 3;
+        margin: auto;
+        margin-top: 20%;
+    }
+    
     .introBar p {
         font-size: 2rem;
     }

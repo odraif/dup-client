@@ -38,7 +38,7 @@ function DegUI(props) {
                             onChange={handleRadioChange}
                         />
                         <label htmlFor={item.value}>
-                            <FontAwesomeIcon icon={[item.type, item.icon]} />
+                            <FontAwesomeIcon icon={[item.type, item.icon]} className="calicon"/>
                             {item.value}
                         </label>
                     </p>

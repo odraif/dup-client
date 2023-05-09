@@ -37,7 +37,7 @@ function Services(props) {
 
     return (
         <>
-            <div className="radio-with-Icon">
+            <div className="radio-with-Icon flex-w">
                 {Data && Data.Services.map((item) => (
                     <p className="radioOption-Item" key={item.id}>
                         <input
@@ -50,7 +50,7 @@ function Services(props) {
                             onChange={handleCheckboxChange}
                         />
                         <label htmlFor={item.value}>
-                            <FontAwesomeIcon icon={[item.type, item.icon]} />
+                            <FontAwesomeIcon icon={[item.type, item.icon]} className="calicon" />
                             {item.value}
                         </label>
                     </p>
