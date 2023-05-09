@@ -34,7 +34,7 @@ function Platform(props) {
                         <input type="checkbox"
                             name="Platform"
                             id={item.value}
-                            // value={item.value}
+                            value={item.value}
                             className="ng-valid ng-dirty ng-touched ng-empty"
                             checked={selectedItems.includes(item.value)}
                             onChange={handleCheckboxChange}

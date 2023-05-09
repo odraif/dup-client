@@ -20,9 +20,9 @@ function Calculator() {
     const next = () => {
         setCurrentStep(currentStep + 1);
     };
-    // const back = () => {
-    //     setCurrentStep(currentStep - 1);
-    // };
+    const back = () => {
+        setCurrentStep(currentStep - 1);
+    };
     switch (currentStep) {
         case 1:
             return (
@@ -62,6 +62,8 @@ function Calculator() {
                 step {currentStep}
                 </>
             );
+            default:
+               return(<>hello default</> )
     }
 }
 export default Calculator;
