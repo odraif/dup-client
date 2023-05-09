@@ -3,8 +3,13 @@ import Button from '@mui/material/Button';
 import Pic from "./circuit-icon-png-18.png"
 import TV from "./digital_home.mp4"
 import "./intro.css";
+import { useNavigate } from "react-router-dom";
 
 export default function FirstContent() {
+    const go = useNavigate();
+    const handlegoclick =()=>{
+        go("/calculator");
+    }
     return (
         <>
             <div dangerouslySetInnerHTML={{
@@ -27,6 +32,7 @@ export default function FirstContent() {
                         style={{ margin: "10px", padding: "10px 20px", minWidth: "200px", backgroundColor: "#fff", color: "#041560", fontWeight: "bold" }}> Nos projet</Button>
                     <Button
                         variant="outlined"
+                        onClick={handlegoclick}
                         style={{ borderColor: "#fff", color: "#fff", padding: "10px 20px", margin: "10px", minWidth: "200px", fontWeight: "bold" }}> Calculer le coût</Button>
                 </div>
             </div >

@@ -1,28 +1,302 @@
 {
-    "platforms":[
+    "platforms": [
         {
-            "id":1,
-            "name":"Platform",
-            "value":"Web",
+            "id": 1,
+            "name": "Platform",
+            "value": "Web",
             "price": 400,
-            "icon":"globe",
-            "type":"fas"
+            "icon": "globe",
+            "type": "fas"
         },
         {
-            "id":2,
-            "name":"Platform",
-            "value":"Android",
+            "id": 2,
+            "name": "Platform",
+            "value": "Android",
             "price": 300,
-            "icon":"android",
-            "type":"fab"
+            "icon": "android",
+            "type": "fab"
         },
         {
-            "id":3,
-            "name":"Platform",
-            "value":"Apple",
+            "id": 3,
+            "name": "Platform",
+            "value": "Apple",
             "price": 300,
-            "icon":"apple",
-            "type":"fab"
+            "icon": "apple",
+            "type": "fab"
+        }
+    ],
+    "needed": [
+        {
+            "id": 1,
+            "name": "needed",
+            "value": "An application from scratch",
+            "price": 400,
+            "icon": "layer-group",
+            "type": "fas"
+        },
+        {
+            "id": 2,
+            "name": "needed",
+            "value": "Update",
+            "price": 300,
+            "icon": "window-restore",
+            "type": "fas"
+        },
+        {
+            "id": 3,
+            "name": "needed",
+            "value": "Revision of the project",
+            "price": 300,
+            "icon": "screwdriver-wrench",
+            "type": "fas"
+        }
+    ],
+    "Npage": [
+        {
+            "id": 1,
+            "name": "Npage",
+            "value": "less than 10",
+            "price": 400,
+            "icon": "square-full",
+            "type": "far"
+        },
+        {
+            "id": 2,
+            "name": "Npage",
+            "value": "from 10 to 25",
+            "price": 300,
+            "icon": "square-full",
+            "type": "far"
+        },
+        {
+            "id": 3,
+            "name": "Npage",
+            "value": "more 25",
+            "price": 300,
+            "icon": "square-full",
+            "type": "far"
+        }
+    ],
+    "DegUI": [
+        {
+            "id": 1,
+            "name": "DegUI",
+            "value": "simple",
+            "price": 400,
+            "icon": "object-ungroup",
+            "type": "far"
+        },
+        {
+            "id": 2,
+            "name": "DegUI",
+            "value": "Unique",
+            "price": 300,
+            "icon": "star",
+            "type": "fas"
+        },
+        {
+            "id": 3,
+            "name": "DegUI",
+            "value": "Unique with animation",
+            "price": 300,
+            "icon": "layer-group",
+            "type": "fas"
+        }
+    ],
+    "Features": [
+        {
+            "id": 1,
+            "name": "Features",
+            "value": "Search",
+            "price": 400,
+            "icon": "magnifying-glass",
+            "type": "fas"
+        },
+        {
+            "id": 2,
+            "name": "Features",
+            "value": "Map",
+            "price": 300,
+            "icon": "map",
+            "type": "fas"
+        },
+        {
+            "id": 3,
+            "name": "Features",
+            "value": "Catalog",
+            "price": 300,
+            "icon": "swatchbook",
+            "type": "fas"
+        },
+        {
+            "id": 4,
+            "name": "Features",
+            "value": "Calendar",
+            "price": 400,
+            "icon": "calendar-days",
+            "type": "fas"
+        },
+        {
+            "id": 5,
+            "name": "Features",
+            "value": "Payments",
+            "price": 300,
+            "icon": "credit-card",
+            "type": "far"
+        },
+        {
+            "id": 6,
+            "name": "Features",
+            "value": "Booking",
+            "price": 300,
+            "icon": "receipt",
+            "type": "fas"
+        },
+        {
+            "id": 7,
+            "name": "Features",
+            "value": "Registration and authorization",
+            "price": 400,
+            "icon": "arrow-right-to-bracket",
+            "type": "fas"
+        },
+        {
+            "id": 8,
+            "name": "Features",
+            "value": "Chats",
+            "price": 300,
+            "icon": "comments",
+            "type": "fas"
+        },
+        {
+            "id": 9,
+            "name": "Features",
+            "value": "QR",
+            "price": 300,
+            "icon": "qrcode",
+            "type": "fas"
+        },
+        {
+            "id": 10,
+            "name": "Features",
+            "value": "3D",
+            "price": 300,
+            "icon": "cubes",
+            "type": "fas"
+        },
+        {
+            "id": 11,
+            "name": "Features",
+            "value": "Favourites",
+            "price": 400,
+            "icon": "star",
+            "type": "fas"
+        },
+        {
+            "id": 12,
+            "name": "Features",
+            "value": "Reviews and ratings",
+            "price": 300,
+            "icon": "star-half-stroke",
+            "type": "fas"
+        },
+        {
+            "id": 13,
+            "name": "Features",
+            "value": "Notifications",
+            "price": 300,
+            "icon": "message",
+            "type": "fas"
+        },
+        {
+            "id": 14,
+            "name": "Features",
+            "value": "Working with files",
+            "price": 300,
+            "icon": "file",
+            "type": "fas"
+        },
+        {
+            "id": 15,
+            "name": "Features",
+            "value": "AR",
+            "price": 300,
+            "icon": "cube",
+            "type": "fas"
+        },
+        {
+            "id": 16,
+            "name": "Features",
+            "value": "Collecting data from sensors",
+            "price": 300,
+            "icon": "database",
+            "type": "fas"
+        },
+        {
+            "id": 17,
+            "name": "Features",
+            "value": "User testing",
+            "price": 400,
+            "icon": "list-check",
+            "type": "fas"
+        },
+        {
+            "id": 18,
+            "name": "Features",
+            "value": "Technical support",
+            "price": 300,
+            "icon": "headset",
+            "type": "fas"
+        }
+    ],
+    "Services": [
+        {
+            "id": 1,
+            "name": "Services",
+            "value": "SMS Mailing",
+            "price": 400,
+            "icon": "comment-sms",
+            "type": "fas"
+        },
+        {
+            "id": 2,
+            "name": "Services",
+            "value": "API",
+            "price": 300,
+            "icon": "link",
+            "type": "fas"
+        },
+        {
+            "id": 3,
+            "name": "Services",
+            "value": "CRM",
+            "price": 300,
+            "icon": "book",
+            "type": "fas"
+        },
+        {
+            "id": 4,
+            "name": "Services",
+            "value": "CMS",
+            "price": 400,
+            "icon": "bars-progress",
+            "type": "fas"
+        },
+        {
+            "id": 5,
+            "name": "Services",
+            "value": "Billing systems",
+            "price": 300,
+            "icon": "file-invoice-dollar",
+            "type": "fas"
+        },
+        {
+            "id": 6,
+            "name": "Services",
+            "value": "Cash register equipment",
+            "price": 300,
+            "icon": "cash-register",
+            "type": "fas"
         }
     ]
 }

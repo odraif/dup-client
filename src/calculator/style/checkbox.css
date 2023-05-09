@@ -1,5 +1,8 @@
+.flex-w{
+    flex-wrap: wrap;
+}
 div.radio-with-Icon {
-    display: block;
+    display: flex;
 }
 
 div.radio-with-Icon p.radioOption-Item {

@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import Platform from './wedget/platform';
+import Needed from './wedget/Needed';
+import Npage from './wedget/N_pages';
+import DegUI from './wedget/Deg_UI';
+import Features from './wedget/Features';
+import Services from './wedget/Services';
 
 function Calculator() {
     const [currentStep, setCurrentStep] = useState(1);
@@ -35,35 +40,57 @@ function Calculator() {
         case 2:
             return (
                 <>
-                    step {currentStep}
+                    <Needed
+                        data={formData}
+                        handleChange={handleChange}
+                        next={next}
+                        back={back}
+                    />
                 </>
             );
         case 3:
             return (
                 <>
-                step {currentStep}
+                    <Npage
+                        data={formData}
+                        handleChange={handleChange}
+                        next={next}
+                        back={back}
+                    />
                 </>
             );
         case 4:
             return (
                 <>
-                step {currentStep}
+                    <DegUI
+                        data={formData}
+                        handleChange={handleChange}
+                        next={next}
+                        back={back}
+                    />
                 </>
             );
         case 5:
             return (
-                <>
-                step {currentStep}
-                </>
+                <Features
+                    data={formData}
+                    handleChange={handleChange}
+                    next={next}
+                    back={back}
+                />
             );
         case 6:
             return (
                 <>
-                step {currentStep}
+                    <Services
+                        data={formData}
+                        handleChange={handleChange}
+                        back={back}
+                    />
                 </>
             );
-            default:
-               return(<>hello default</> )
+        default:
+            return (<>hello default</>)
     }
 }
 export default Calculator;
