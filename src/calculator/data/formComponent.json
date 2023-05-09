@@ -1,0 +1,28 @@
+{
+    "platforms":[
+        {
+            "id":1,
+            "name":"Platform",
+            "value":"Web",
+            "price": 400,
+            "icon":"globe",
+            "type":"fas"
+        },
+        {
+            "id":2,
+            "name":"Platform",
+            "value":"Android",
+            "price": 300,
+            "icon":"android",
+            "type":"fab"
+        },
+        {
+            "id":3,
+            "name":"Platform",
+            "value":"Apple",
+            "price": 300,
+            "icon":"apple",
+            "type":"fab"
+        }
+    ]
+}

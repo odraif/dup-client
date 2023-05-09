@@ -1,12 +1,9 @@
-.introBar {
-    border-right: 3px solid #fff;
+.introCentre img {
     padding-right: 10px;
-    width: 60%;
+    width: 50%;
+    z-index: 3;
+}
 
-}
-.introBar p {
-    font-size: 3rem;
-}
 .introBtn {
     width: 30%;
     display: flex;
@@ -19,17 +16,19 @@
     display: flex;
     flex-direction: row;
     width: 80%;
-    margin-top: 5%!important;
-    height: 100dvh;
+    margin-top: 3%!important;
+    
 }
+.home_Video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    user-select: none;
+    
+  }
 @media (max-width:900px) {
-    .introBar {
-        border-bottom: 3px solid #fff;
-        border-right: none;
-        padding-right: 0;
-        padding-bottom: 20px;
-        width: 100%;
-    }
     .introCentre {
         flex-direction: column;
     }

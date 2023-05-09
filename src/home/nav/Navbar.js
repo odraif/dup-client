@@ -21,7 +21,7 @@ function NavBar() {
                         <img src={logo} alt="" className="logo" />
                     </Link>
                         <Link to="" className="menu">Contact</Link>
-                        <Link to="" className="menu">Calculateur</Link>
+                        <Link to="/calculator" className="menu">Calculateur</Link>
                         <Link to="" className="menu">A props</Link>
                         <Link to="" className="menu">About us</Link>
                         <button className="icon" onClick={myFunction}>
