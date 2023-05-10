@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect }from "react";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import "../style/radio.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,19 +10,28 @@ import Data from "../data/formComponent.json"
 function Npage(props) {
     library.add(faSquareFull);
 
-    const { next ,back} = props;
+    const { next ,back,data ,prices} = props;
     const [selectedItems, setSelectedItems] = useState();
 
 
-    function handleRadioChange(event) {
-        const selectedValue = event.target.value;
-        setSelectedItems(selectedValue)
+    function handleRadioChange(event,radio) {
+        setSelectedItems(radio)
       };
+      useEffect(() => {
+        console.log(selectedItems)
+    }, [selectedItems])
 
     const show = () => {
         console.log(selectedItems)
     };
-
+    const goToNext = async () => {
+        await prices(selectedItems)
+        await data((prevChildData) => ({
+            ...prevChildData,
+            Npage: selectedItems,
+          }));
+        await next()
+    };
     return (
         <>
             <div className="radio-with-Icon">
@@ -34,7 +43,7 @@ function Npage(props) {
                             id={item.value}
                             value={item.value}
                             className="ng-valid ng-dirty ng-touched ng-empty"
-                            onChange={handleRadioChange}
+                            onChange={event => handleRadioChange(event, item)}
                         />
                         <label htmlFor={item.value}>
                             <FontAwesomeIcon icon={[item.type, item.icon]}  className="calicon"/>
@@ -47,7 +56,7 @@ function Npage(props) {
             <div style={{ marginTop: "20px" }}>
                 <button onClick={back}>presedent</button>
                 <button onClick={show}>show selected</button>
-                <button onClick={next}>Suivant</button>
+                <button onClick={goToNext}>Suivant</button>
             </div>
         </>
     )

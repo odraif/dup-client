@@ -28,7 +28,7 @@
     "needed": [
         {
             "id": 1,
-            "name": "needed",
+            "name": "Needed",
             "value": "An application from scratch",
             "price": 400,
             "icon": "layer-group",
@@ -36,7 +36,7 @@
         },
         {
             "id": 2,
-            "name": "needed",
+            "name": "Needed",
             "value": "Update",
             "price": 300,
             "icon": "window-restore",
@@ -44,7 +44,7 @@
         },
         {
             "id": 3,
-            "name": "needed",
+            "name": "Needed",
             "value": "Revision of the project",
             "price": 300,
             "icon": "screwdriver-wrench",

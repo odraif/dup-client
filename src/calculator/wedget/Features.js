@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import "../style/checkbox.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -52,26 +52,40 @@ function Features(props) {
         faArrowRightToBracket
     );
 
-    const { next ,back} = props;
+    const { data, next, back, prices, oldprices, updatePrice } = props;
     const [selectedItems, setSelectedItems] = useState([]);
 
 
 
-    function handleCheckboxChange(event) {
-        const value = event.target.value;
+    function handleCheckboxChange(event, box) {
         const checked = event.target.checked;
 
         if (checked) {
-            setSelectedItems([...selectedItems, value]);
+            setSelectedItems([...selectedItems, box]);
+            prices(box)
         } else {
-            setSelectedItems(selectedItems.filter(item => item !== value));
+            const updatedProducts = selectedItems.filter(
+                selectedItems => selectedItems !== box
+            );
+            setSelectedItems(updatedProducts);
+            if (oldprices) {
+                updatePrice(oldprices.filter(price => price.id !== box.id));
+            }
         }
     }
-
+    useEffect(() => {
+        console.log(selectedItems)
+    }, [selectedItems])
     const show = () => {
         console.log(selectedItems)
     }
-
+    const goToNext = async () => {
+        await data((prevChildData) => ({
+            ...prevChildData,
+            Features: selectedItems,
+        }));
+        await next();
+    }
     return (
         <>
             <div className="radio-with-Icon flex-w">
@@ -79,15 +93,15 @@ function Features(props) {
                     <p className="radioOption-Item" key={item.id}>
                         <input
                             type="checkbox"
-                            name="Features"
+                            name="Platform"
                             id={item.value}
-                            value={item.value}
+                            value={item}
                             className="ng-valid ng-dirty ng-touched ng-empty"
-                            checked={selectedItems.includes(item.value)}
-                            onChange={handleCheckboxChange}
+                            checked={selectedItems.includes(item)}
+                            onChange={event => handleCheckboxChange(event, item)}
                         />
                         <label htmlFor={item.value}>
-                            <FontAwesomeIcon icon={[item.type, item.icon]} className="calicon"/>
+                            <FontAwesomeIcon icon={[item.type, item.icon]} className="calicon" />
                             {item.value}
                         </label>
                     </p>
@@ -97,7 +111,7 @@ function Features(props) {
             <div style={{ marginTop: "20px" }}>
                 <button onClick={back}>presedent</button>
                 <button onClick={show}>show selected</button>
-                <button onClick={next}>Suivant</button>
+                <button onClick={goToNext}>Suivant</button>
             </div>
         </>
     )

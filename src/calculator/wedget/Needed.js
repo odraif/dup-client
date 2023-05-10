@@ -1,25 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import "../style/radio.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faAndroid, faApple } from '@fortawesome/free-brands-svg-icons';
-import { faLayerGroup ,faWindowRestore, faScrewdriverWrench} from "@fortawesome/free-solid-svg-icons";
+import { faLayerGroup, faWindowRestore, faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
 import Data from "../data/formComponent.json"
 
 function Needed(props) {
-    library.add(faLayerGroup,faWindowRestore ,faScrewdriverWrench);
+    library.add(faLayerGroup, faWindowRestore, faScrewdriverWrench);
 
-    const { next ,back} = props;
+    const { data,next, back, prices } = props;
     const [selectedItems, setSelectedItems] = useState();
 
 
-    function handleRadioChange(event) {
-        const selectedValue = event.target.value;
-        setSelectedItems(selectedValue)
-      };
+    function handleRadioChange(event, radio) {
+        const checked = event.target.checked;
+        setSelectedItems(radio)
+        console.log(checked)
+    };
+
+    useEffect(() => {
+        console.log(selectedItems)
+    }, [selectedItems])
 
     const show = () => {
         console.log(selectedItems)
+    };
+
+    const goToNext = async () => {
+        await prices(selectedItems)
+        await data((prevChildData) => ({
+            ...prevChildData,
+            Needed: selectedItems,
+          }));
+        await next()
     };
 
     return (
@@ -33,10 +47,10 @@ function Needed(props) {
                             id={item.value}
                             value={item.value}
                             className="ng-valid ng-dirty ng-touched ng-empty"
-                            onChange={handleRadioChange}
+                            onChange={event => handleRadioChange(event, item)}
                         />
                         <label htmlFor={item.value}>
-                            <FontAwesomeIcon icon={[item.type, item.icon]} className="calicon"/>
+                            <FontAwesomeIcon icon={[item.type, item.icon]} className="calicon" />
                             {item.value}
                         </label>
                     </p>
@@ -46,7 +60,7 @@ function Needed(props) {
             <div style={{ marginTop: "20px" }}>
                 <button onClick={back}>presedent</button>
                 <button onClick={show}>show selected</button>
-                <button onClick={next}>Suivant</button>
+                <button onClick={goToNext}>Suivant</button>
             </div>
         </>
     )
