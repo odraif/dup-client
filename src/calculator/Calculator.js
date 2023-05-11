@@ -6,8 +6,12 @@ import DegUI from './wedget/Deg_UI';
 import Features from './wedget/Features';
 import Services from './wedget/Services';
 import "./style/tableCalcul.css"
+import Type from './register/type';
+
 function Calculator() {
-    const [currentStep, setCurrentStep] = useState(1);
+    document.title = "Calculator";
+
+    const [currentStep, setCurrentStep] = useState(0);
     const [price, setprice] = useState([]);
     const [cout, setcout] = useState(0);
     const [formData, setFormData] = useState({
@@ -87,14 +91,14 @@ function Calculator() {
                                     {Array.isArray(formData[key])
                                         ? formData[key].map((item) => (
                                             <>
-                                                {item.value+" "},
+                                                {item.value + " "},
                                                 {/* <p>{item.price},</p> */}
                                             </>
 
                                         ))
                                         : (
                                             <>
-                                                <p>{formData[key].value+" "},</p>
+                                                <p>{formData[key].value + " "},</p>
                                                 {/* <p>{formData[key].price},</p> */}
                                             </>
 
@@ -216,7 +220,9 @@ function Calculator() {
                 </>
             );
         default:
-            return (<>hello default</>)
+            return (<Type
+                next={next}
+            ></Type>)
     }
 }
 export default Calculator;
