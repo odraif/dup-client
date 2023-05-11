@@ -5,7 +5,7 @@ import Npage from './wedget/N_pages';
 import DegUI from './wedget/Deg_UI';
 import Features from './wedget/Features';
 import Services from './wedget/Services';
-
+import "./style/tableCalcul.css"
 function Calculator() {
     const [currentStep, setCurrentStep] = useState(1);
     const [price, setprice] = useState([]);
@@ -18,17 +18,28 @@ function Calculator() {
         Features: "",
         Services: "",
     });
-
-
+    const init = {
+        Platform: "",
+        Needed: "",
+        Npage: "",
+        DegUI: "",
+        Features: "",
+        Services: "",
+    };
     useEffect(() => {
-        let ans = 0
-        price && price.map((item) => (ans += Number(item.price)))
-        setcout(ans)
+        let sum = 0
+        price && price.map((item) => (sum += Number(item.price)))
+        setcout(sum)
         console.log(price)
 
-    }, [price])
+    }, [price]);
 
-
+    const handleReset = async () => {
+        await setFormData(init);
+        await setprice([]);
+        await setcout(0);
+        await setCurrentStep(1);
+    }
 
 
     const handleData = (data) => {
@@ -50,11 +61,68 @@ function Calculator() {
     const back = () => {
         setCurrentStep(currentStep - 1);
     };
+    const calculatePriceSum = (data) => {
+        let sum = 0;
+
+        if (Array.isArray(data)) {
+            data.forEach((item) => {
+                sum += item.price;
+            });
+        } else {
+            sum = data.price;
+        }
+
+        return sum;
+    };
+    function List() {
+
+        return (
+            <>
+                <table>
+                    {Object.keys(formData).map((key) => (
+                        <>
+                            <tr key={key}>
+                                <th>{key}</th>
+                                <td>
+                                    {Array.isArray(formData[key])
+                                        ? formData[key].map((item) => (
+                                            <>
+                                                {item.value+" "},
+                                                {/* <p>{item.price},</p> */}
+                                            </>
+
+                                        ))
+                                        : (
+                                            <>
+                                                <p>{formData[key].value+" "},</p>
+                                                {/* <p>{formData[key].price},</p> */}
+                                            </>
+
+                                        )}
+                                </td>
+                                <td>
+                                    <p>{calculatePriceSum(formData[key])}$</p>
+                                </td>
+                            </tr>
+
+                        </>
+                    ))}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><p>Total Price: {cout}$</p></td>
+                    </tr>
+                </table >
+            </>
+        );
+    }
     const showRes = () => {
         console.log(formData)
+
     }
     switch (currentStep) {
         case 1:
+
             return (
 
                 <>
@@ -65,6 +133,7 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
+                    <button onClick={handleReset}>reset</button>
                     {cout}
                 </>
             );
@@ -77,6 +146,7 @@ function Calculator() {
                         back={back}
                         prices={addprice}
                     />
+                    <button onClick={handleReset}>reset</button>
                     {cout}
                 </>
             );
@@ -89,6 +159,7 @@ function Calculator() {
                         back={back}
                         prices={addprice}
                     />
+                    <button onClick={handleReset}>reset</button>
                     {cout}
                 </>
             );
@@ -101,6 +172,7 @@ function Calculator() {
                         back={back}
                         prices={addprice}
                     />
+                    <button onClick={handleReset}>reset</button>
                     {cout}
                 </>
             );
@@ -115,6 +187,7 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
+                    <button onClick={handleReset}>reset</button>
                     {cout}
                 </>
             );
@@ -129,6 +202,7 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
+                    <button onClick={handleReset}>reset</button>
                     {cout}
                 </>
             );
@@ -136,7 +210,9 @@ function Calculator() {
             return (
                 <>
                     {cout}
+                    <button onClick={handleReset}>reset</button>
                     <button onClick={showRes}>list</button>
+                    <List></List>
                 </>
             );
         default:

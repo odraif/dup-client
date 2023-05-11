@@ -30,7 +30,7 @@
             "id": 1,
             "name": "Needed",
             "value": "An application from scratch",
-            "price": 400,
+            "price": 500,
             "icon": "layer-group",
             "type": "fas"
         },
@@ -46,7 +46,7 @@
             "id": 3,
             "name": "Needed",
             "value": "Revision of the project",
-            "price": 300,
+            "price": 350,
             "icon": "screwdriver-wrench",
             "type": "fas"
         }
@@ -56,7 +56,7 @@
             "id": 1,
             "name": "Npage",
             "value": "less than 10",
-            "price": 400,
+            "price": 300,
             "icon": "square-full",
             "type": "far"
         },
@@ -64,7 +64,7 @@
             "id": 2,
             "name": "Npage",
             "value": "from 10 to 25",
-            "price": 300,
+            "price": 450,
             "icon": "square-full",
             "type": "far"
         },
@@ -72,7 +72,7 @@
             "id": 3,
             "name": "Npage",
             "value": "more 25",
-            "price": 300,
+            "price": 500,
             "icon": "square-full",
             "type": "far"
         }
@@ -82,7 +82,7 @@
             "id": 1,
             "name": "DegUI",
             "value": "simple",
-            "price": 400,
+            "price": 300,
             "icon": "object-ungroup",
             "type": "far"
         },
@@ -90,7 +90,7 @@
             "id": 2,
             "name": "DegUI",
             "value": "Unique",
-            "price": 300,
+            "price": 350,
             "icon": "star",
             "type": "fas"
         },
@@ -98,7 +98,7 @@
             "id": 3,
             "name": "DegUI",
             "value": "Unique with animation",
-            "price": 300,
+            "price": 450,
             "icon": "layer-group",
             "type": "fas"
         }
