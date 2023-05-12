@@ -156,7 +156,7 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
-                    <button onClick={handleReset}>reset</button>
+                    {/* <button onClick={handleReset}>reset</button> */}
                     {cout}
                 </>
             );
@@ -169,7 +169,7 @@ function Calculator() {
                         back={back}
                         prices={addprice}
                     />
-                    <button onClick={handleReset}>reset</button>
+                    {/* <button onClick={handleReset}>reset</button> */}
                     {cout}
                 </>
             );
@@ -182,7 +182,7 @@ function Calculator() {
                         back={back}
                         prices={addprice}
                     />
-                    <button onClick={handleReset}>reset</button>
+                    {/* <button onClick={handleReset}>reset</button> */}
                     {cout}
                 </>
             );
@@ -195,7 +195,7 @@ function Calculator() {
                         back={back}
                         prices={addprice}
                     />
-                    <button onClick={handleReset}>reset</button>
+                    {/* <button onClick={handleReset}>reset</button> */}
                     {cout}
                 </>
             );
@@ -210,7 +210,7 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
-                    <button onClick={handleReset}>reset</button>
+                    {/* <button onClick={handleReset}>reset</button> */}
                     {cout}
                 </>
             );
@@ -225,7 +225,7 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
-                    <button onClick={handleReset}>reset</button>
+                    {/* <button onClick={handleReset}>reset</button> */}
                     {cout}
                 </>
             );
