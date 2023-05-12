@@ -1,3 +1,31 @@
-.container{
-    margin: auto!important;
+.container {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.choiceButton{
+    padding: 60px 30px;
+    margin: 10px;
+    font-size: 18px;
+    color: #099292;
+    background-color: transparent;
+    border: 1px #099292 solid;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+.choiceButton:hover{
+    background-color: #e7fdfd;
+    color: #08c9c9;
+    border: 1px #08c9c9 solid;
+    box-shadow: 0 0 20px 1px #94ecec;
+}
+.choiceButton:active{
+    background-color: #099292;
+    color: #fff;
+    border: 1px #08c9c9 solid;
+    box-shadow: 0 0 20px 1px #c9c9c9;
 }

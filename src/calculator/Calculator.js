@@ -14,6 +14,7 @@ function Calculator() {
     const [currentStep, setCurrentStep] = useState(0);
     const [price, setprice] = useState([]);
     const [cout, setcout] = useState(0);
+    const [userData, setuserData] = useState();
     const [formData, setFormData] = useState({
         Platform: "",
         Needed: "",
@@ -45,6 +46,9 @@ function Calculator() {
         await setCurrentStep(1);
     }
 
+    const handleUserData = (data) => {
+        setuserData(data)
+    }
 
     const handleData = (data) => {
         setFormData(data);
@@ -79,9 +83,25 @@ function Calculator() {
         return sum;
     };
     function List() {
-
         return (
             <>
+                <div style={{display:"flex",lineHeight:"2px",justifyContent:"center",marginBottom:"20px"}}>
+                    <div style={{marginRight:"30px"}}>
+                        <h3>STE DIGITIZE YOUR PROJECT</h3>
+                        <h5>N 18 AV ITTANE Z.I TASSILA DCHEIRA EL JIHADIA</h5>
+                        <h5>-8000 AGADIR MAROC</h5>
+                        <h5>80000 AGADIR</h5>
+                        <h5>Tél: 0761513522</h5>
+                        
+                    </div>
+                    <div>
+                        {Object.entries(userData).map(([key, value]) => (
+                            <p key={key}>
+                                <strong>{key}:</strong> {value}
+                            </p>
+                        ))}
+                    </div>
+                </div>
                 <table>
                     {Object.keys(formData).map((key) => (
                         <>
@@ -92,14 +112,12 @@ function Calculator() {
                                         ? formData[key].map((item) => (
                                             <>
                                                 {item.value + " "},
-                                                {/* <p>{item.price},</p> */}
                                             </>
 
                                         ))
                                         : (
                                             <>
                                                 <p>{formData[key].value + " "},</p>
-                                                {/* <p>{formData[key].price},</p> */}
                                             </>
 
                                         )}
@@ -121,9 +139,10 @@ function Calculator() {
         );
     }
     const showRes = () => {
-        console.log(formData)
-
+        console.log(formData);
+        console.log(userData);
     }
+
     switch (currentStep) {
         case 1:
 
@@ -212,16 +231,16 @@ function Calculator() {
             );
         case 7:
             return (
-                <>
-                    {cout}
-                    <button onClick={handleReset}>reset</button>
-                    <button onClick={showRes}>list</button>
+                <>  <button onClick={()=> window.print()} className='dont-print'>Print</button>
+                    {/* <button onClick={handleReset} className='dont-print'>reset</button>
+                    <button onClick={showRes} className='dont-print'>list</button> */}
                     <List></List>
                 </>
             );
         default:
             return (<Type
                 next={next}
+                data={handleUserData}
             ></Type>)
     }
 }
