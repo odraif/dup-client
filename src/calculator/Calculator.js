@@ -39,12 +39,12 @@ function Calculator() {
 
     }, [price]);
 
-    const handleReset = async () => {
-        await setFormData(init);
-        await setprice([]);
-        await setcout(0);
-        await setCurrentStep(1);
-    }
+    // const handleReset = async () => {
+    //     await setFormData(init);
+    //     await setprice([]);
+    //     await setcout(0);
+    //     await setCurrentStep(1);
+    // }
 
     const handleUserData = (data) => {
         setuserData(data)
@@ -138,10 +138,10 @@ function Calculator() {
             </>
         );
     }
-    const showRes = () => {
-        console.log(formData);
-        console.log(userData);
-    }
+    // const showRes = () => {
+    //     console.log(formData);
+    //     console.log(userData);
+    // }
 
     switch (currentStep) {
         case 1:
