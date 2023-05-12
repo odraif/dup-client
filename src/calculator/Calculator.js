@@ -39,12 +39,12 @@ function Calculator() {
 
     }, [price]);
 
-    // const handleReset = async () => {
-    //     await setFormData(init);
-    //     await setprice([]);
-    //     await setcout(0);
-    //     await setCurrentStep(1);
-    // }
+    const handleReset = async () => {
+        await setFormData(init);
+        await setprice([]);
+        await setcout(0);
+        await setCurrentStep(1);
+    }
 
     const handleUserData = (data) => {
         setuserData(data)
@@ -138,10 +138,10 @@ function Calculator() {
             </>
         );
     }
-    // const showRes = () => {
-    //     console.log(formData);
-    //     console.log(userData);
-    // }
+    const showRes = () => {
+        console.log(formData);
+        console.log(userData);
+    }
 
     switch (currentStep) {
         case 1:
@@ -156,7 +156,7 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
-                    {/* <button onClick={handleReset}>reset</button> */}
+                    <button onClick={handleReset}>reset</button>
                     {cout}
                 </>
             );
@@ -169,7 +169,7 @@ function Calculator() {
                         back={back}
                         prices={addprice}
                     />
-                    {/* <button onClick={handleReset}>reset</button> */}
+                    <button onClick={handleReset}>reset</button>
                     {cout}
                 </>
             );
@@ -182,7 +182,7 @@ function Calculator() {
                         back={back}
                         prices={addprice}
                     />
-                    {/* <button onClick={handleReset}>reset</button> */}
+                    <button onClick={handleReset}>reset</button>
                     {cout}
                 </>
             );
@@ -195,7 +195,7 @@ function Calculator() {
                         back={back}
                         prices={addprice}
                     />
-                    {/* <button onClick={handleReset}>reset</button> */}
+                    <button onClick={handleReset}>reset</button>
                     {cout}
                 </>
             );
@@ -210,7 +210,7 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
-                    {/* <button onClick={handleReset}>reset</button> */}
+                    <button onClick={handleReset}>reset</button>
                     {cout}
                 </>
             );
@@ -225,15 +225,15 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
-                    {/* <button onClick={handleReset}>reset</button> */}
+                    <button onClick={handleReset}>reset</button>
                     {cout}
                 </>
             );
         case 7:
             return (
                 <>  <button onClick={()=> window.print()} className='dont-print'>Print</button>
-                    {/* <button onClick={handleReset} className='dont-print'>reset</button>
-                    <button onClick={showRes} className='dont-print'>list</button> */}
+                    <button onClick={handleReset} className='dont-print'>reset</button>
+                    <button onClick={showRes} className='dont-print'>list</button>
                     <List></List>
                 </>
             );
