@@ -12,7 +12,7 @@ const Backv = () => {
           autoplay
           playsinline
           src="${TV}"
-          class="home_Video"
+          class="home_Video dont-print"
         />,
       ` }}></div>
         </div>

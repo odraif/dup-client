@@ -9,9 +9,9 @@ import Logo from "../home/nav/logo.png"
 import "./style/tableCalcul.css"
 import Type from './register/type';
 
+
 function Calculator() {
     document.title = "Calculator";
-
     const [currentStep, setCurrentStep] = useState(0);
     const [price, setprice] = useState([]);
     const [cout, setcout] = useState(0);
@@ -107,7 +107,7 @@ function Calculator() {
                         <div>
                             <img src={Logo} alt='' style={{ width: "50px" }} />
                         </div>
-                        <div>
+                        <div style={{width: "300px"}}>
                             <h3>Devis DV{dstime}</h3>
                             <p>Date de creation:{full} {time}</p>
                         </div>
@@ -192,7 +192,7 @@ function Calculator() {
                         </tr>
                     </table >
                 </div>
-                <div style={{ marginTop: "35%" }}>
+                <div style={{ marginTop: "30%" }}>
                     <div style={{ textAlign: "center" }}>
                         <p style={{ lineHeight: "2px", fontSize: "10px" }}>Capital de 10 000 MAD-R.C.:2571-Patente:49704318</p>
                         <p style={{ lineHeight: "2px", fontSize: "10px" }}>I.F.:51708439-ICE:003003499000049-Numéro TVA:51708430</p>
@@ -294,10 +294,10 @@ function Calculator() {
             );
         case 7:
             return (
-                <>  <button onClick={() => window.print()} className='dont-print'>Print</button>
+                <>  <button onClick={()=>{window.print()}} className='dont-print'>Print</button>
                     <button onClick={handleReset} className='dont-print'>reset</button>
                     <button onClick={showRes} className='dont-print'>list</button>
-                    <div style={{ padding: "20px" }}>
+                    <div style={{ padding: "20px" }} className="printable-section">
                         <List></List>
                     </div>
                 </>
@@ -313,4 +313,5 @@ function Calculator() {
             )
     }
 }
+
 export default Calculator;

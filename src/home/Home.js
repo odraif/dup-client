@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
-    const [page, setpage] = useState(1);
+    const [page, setpage] = useState(0);
     const nextpage = () => {
         setpage(page + 1)
     }
@@ -40,7 +40,7 @@ function Home() {
                         <div>
                             <NavBar></NavBar>
                         </div>
-                        <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow" onClick={()=> backpage()} title="Home page"></FontAwesomeIcon></div>
+                        <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow dont-print" onClick={()=> backpage()} title="Home page"></FontAwesomeIcon></div>
                         <div className="body-calcul">
                             <Calculator ></Calculator>
                         </div>
