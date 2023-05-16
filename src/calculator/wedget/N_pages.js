@@ -10,7 +10,7 @@ import Data from "../data/formComponent.json"
 function Npage(props) {
     library.add(faSquareFull);
 
-    const { next ,back,data ,prices} = props;
+    const { next ,data ,prices} = props;
     const [selectedItems, setSelectedItems] = useState();
 
 
@@ -21,9 +21,6 @@ function Npage(props) {
         console.log(selectedItems)
     }, [selectedItems])
 
-    const show = () => {
-        console.log(selectedItems)
-    };
     const goToNext = async () => {
         await prices(selectedItems)
         await data((prevChildData) => ({
@@ -54,8 +51,6 @@ function Npage(props) {
 
             </div>
             <div style={{ marginTop: "20px" }}>
-                <button onClick={back}>presedent</button>
-                <button onClick={show}>show selected</button>
                 <button onClick={goToNext}>Suivant</button>
             </div>
         </>

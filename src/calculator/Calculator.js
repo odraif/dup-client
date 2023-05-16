@@ -67,10 +67,7 @@ function Calculator() {
     const next = () => {
         setCurrentStep(currentStep + 1);
     };
-    const back = () => {
-        setCurrentStep(currentStep - 1);
-    };
-    const calculatePriceSum = (data) => {
+    function calculatePriceSum(data) {
         let sum = 0;
 
         if (Array.isArray(data)) {
@@ -82,7 +79,7 @@ function Calculator() {
         }
 
         return sum;
-    };
+    }
 
 
     function List() {
@@ -97,7 +94,7 @@ function Calculator() {
         const fullc = String(day) + "/" + String(month + 1) + "/" + String(year);
         const full = fullc;
         const time = String(hour) + ":" + String(minute) + ":" + String(seconds);
-        const Slice = String(year).slice(2, 4) 
+        const Slice = String(year).slice(2, 4)
         const dstime = Slice + String(month + 1) + "- 020";
 
         return (
@@ -107,7 +104,7 @@ function Calculator() {
                         <div>
                             <img src={Logo} alt='' style={{ width: "50px" }} />
                         </div>
-                        <div style={{width: "300px"}}>
+                        <div style={{ width: "300px" }}>
                             <h3>Devis DV{dstime}</h3>
                             <p>Date de creation:{full} {time}</p>
                         </div>
@@ -133,8 +130,12 @@ function Calculator() {
                         </div>
                     </div>
                     <table>
+                        <thead></thead>
+                        <tbody>
+                        </tbody>
+                        <tfoot></tfoot>
                         <tr>
-                            <th colSpan="2">Désignation</th>
+                            <th colSpan="2" style={{width:"60%"}}>Désignation</th>
                             <th>TVA</th>
                             <th>HT</th>
                             <th>TTC</th>
@@ -143,7 +144,7 @@ function Calculator() {
                             <>
                                 <tr key={key}>
                                     <th>{key}</th>
-                                    <td>
+                                    <td style={{lineHeight:"17px"}}>
                                         {Array.isArray(formData[key])
                                             ? formData[key].map((item) => (
                                                 <>
@@ -151,19 +152,21 @@ function Calculator() {
                                                 </>
 
                                             ))
+                                            
                                             : (
                                                 <>
-                                                    <p>{formData[key].value + " "},</p>
+                                                    {formData[key].value + " "},
                                                 </>
 
                                             )}
+                                    
                                     </td>
                                     <td>20%</td>
                                     <td>
-                                        <p>{calculatePriceSum(formData[key]) / 1.2}$</p>
+                                        <p>{Number(calculatePriceSum(formData[key])/1.2).toFixed(2)}$</p>
                                     </td>
                                     <td>
-                                        <p>{calculatePriceSum(formData[key])}$</p>
+                                        <p>{Number(calculatePriceSum(formData[key])).toFixed(2)}$</p>
                                     </td>
                                 </tr>
 
@@ -172,27 +175,27 @@ function Calculator() {
                         <tr>
                             <td style={{ border: "none" }}></td>
                             <td style={{ border: "none" }}></td>
-                            <td style={{ border: "none" }}><p>Total HT </p></td>
-                            <td style={{ border: "none" }}></td>
-                            <td style={{ border: "none" }}><p>{Number(cout) / 1.2}$</p></td>
+                            <td style={{ border: "none" }} colSpan="2"><p>Total HT </p></td>
+
+                            <td style={{ border: "none" }}><p>{(Number(cout) / 1.2).toFixed(2)}$</p></td>
                         </tr>
                         <tr>
                             <td style={{ border: "none" }}></td>
                             <td style={{ border: "none" }}></td>
-                            <td style={{ border: "none" }}><p>Total TVA 20% </p></td>
-                            <td style={{ border: "none" }}></td>
-                            <td style={{ border: "none" }}><p>{Number(cout) - (Number(cout) / 1.2)}$</p></td>
+                            <td style={{ border: "none" }} colSpan="2"><p>Total TVA 20% </p></td>
+
+                            <td style={{ border: "none" }}><p>{(Number(cout) - (Number(cout) / 1.2)).toFixed(2)}$</p></td>
                         </tr>
                         <tr>
                             <td style={{ border: "none" }}></td>
                             <td style={{ border: "none" }}></td>
-                            <td style={{ border: "none" }}><p>Total TTC </p></td>
-                            <td style={{ border: "none" }}></td>
-                            <td style={{ border: "none" }}><p>{cout}$</p></td>
+                            <td style={{ border: "none" }} colSpan="2"><p>Total TTC </p></td>
+
+                            <td style={{ border: "none" }}><p>{Number(cout).toFixed(2)}$</p></td>
                         </tr>
                     </table >
                 </div>
-                <div style={{ marginTop: "30%" }}>
+                <div style={{ marginTop: "40%" }}>
                     <div style={{ textAlign: "center" }}>
                         <p style={{ lineHeight: "2px", fontSize: "10px" }}>Capital de 10 000 MAD-R.C.:2571-Patente:49704318</p>
                         <p style={{ lineHeight: "2px", fontSize: "10px" }}>I.F.:51708439-ICE:003003499000049-Numéro TVA:51708430</p>
@@ -229,7 +232,6 @@ function Calculator() {
                     <Needed
                         data={handleData}
                         next={next}
-                        back={back}
                         prices={addprice}
                     />
                     <button onClick={handleReset}>reset</button>
@@ -242,7 +244,6 @@ function Calculator() {
                     <Npage
                         data={handleData}
                         next={next}
-                        back={back}
                         prices={addprice}
                     />
                     <button onClick={handleReset}>reset</button>
@@ -255,7 +256,6 @@ function Calculator() {
                     <DegUI
                         data={handleData}
                         next={next}
-                        back={back}
                         prices={addprice}
                     />
                     <button onClick={handleReset}>reset</button>
@@ -268,7 +268,6 @@ function Calculator() {
                     <Features
                         data={handleData}
                         next={next}
-                        back={back}
                         prices={addprice}
                         oldprices={price}
                         updatePrice={updatePrice}
@@ -282,7 +281,6 @@ function Calculator() {
                 <>
                     <Services
                         data={handleData}
-                        back={back}
                         next={next}
                         prices={addprice}
                         oldprices={price}
@@ -294,7 +292,7 @@ function Calculator() {
             );
         case 7:
             return (
-                <>  <button onClick={()=>{window.print()}} className='dont-print'>Print</button>
+                <>  <button onClick={() => { window.print() }} className='dont-print'>Print</button>
                     <button onClick={handleReset} className='dont-print'>reset</button>
                     <button onClick={showRes} className='dont-print'>list</button>
                     <div style={{ padding: "20px" }} className="printable-section">

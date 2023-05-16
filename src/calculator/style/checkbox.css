@@ -6,6 +6,7 @@
 }
 div.radio-with-Icon {
     display: flex;
+    justify-content: center;
 }
 
 div.radio-with-Icon p.radioOption-Item {
@@ -88,8 +89,17 @@ div.radio-with-Icon p.radioOption-Item input[type="checkbox"]+label:after {
     margin: 0 !important;
 }
 
-.view-card{
-    overflow-y: auto;
-    height: 400px;
-    text-align: center;
+
+
+@media (max-width:600px) {
+    div.radio-with-Icon {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -20px;
+    }
+    .view-card{
+        overflow-y: auto;
+        height: 90%;
+        text-align: center;
+    }
 }

@@ -9,7 +9,7 @@ import Data from "../data/formComponent.json"
 function Needed(props) {
     library.add(faLayerGroup, faWindowRestore, faScrewdriverWrench);
 
-    const { data,next, back, prices } = props;
+    const { data,next, prices } = props;
     const [selectedItems, setSelectedItems] = useState();
 
 
@@ -23,9 +23,6 @@ function Needed(props) {
         console.log(selectedItems)
     }, [selectedItems])
 
-    const show = () => {
-        console.log(selectedItems)
-    };
 
     const goToNext = async () => {
         await prices(selectedItems)
@@ -58,8 +55,6 @@ function Needed(props) {
 
             </div>
             <div style={{ marginTop: "20px" }}>
-                <button onClick={back}>presedent</button>
-                <button onClick={show}>show selected</button>
                 <button onClick={goToNext}>Suivant</button>
             </div>
         </>

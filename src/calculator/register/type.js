@@ -8,12 +8,15 @@ import "../style/form.css"
 const Type = (props) => {
     const [choice, setchoice] = useState(0);
     const { next, data } = props
+    const back = (val)=>{
+        setchoice(val)
+    }
 
     switch (choice) {
         case 1:
-            return (<Person next={next} userdata={data}></Person>);
+            return (<Person next={next} back={back} userdata={data}></Person>);
         case 2:
-            return (<Entreprise next={next} userdata={data}></Entreprise>);
+            return (<Entreprise next={next} back={back} userdata={data}></Entreprise>);
         default:
             return (
                 <>

@@ -15,7 +15,7 @@ function Services(props) {
         faCashRegister
     );
 
-    const { data, next, back, prices, oldprices, updatePrice } = props;
+    const { data, next, prices, oldprices, updatePrice } = props;
     const [selectedItems, setSelectedItems] = useState([]);
 
 
@@ -37,11 +37,8 @@ function Services(props) {
         }
     }
     useEffect(() => {
-        console.log(selectedItems)
+        
     }, [selectedItems])
-    const show = () => {
-        console.log(selectedItems)
-    }
     const goToNext = async () => {
         await data((prevChildData) => ({
             ...prevChildData,
@@ -74,8 +71,6 @@ function Services(props) {
 
                 </div>
                 <div style={{ marginTop: "20px" }}>
-                    <button onClick={back}>presedent</button>
-                    <button onClick={show}>show selected</button>
                     <button onClick={goToNext}>envoyer</button>
                 </div>
             </div>

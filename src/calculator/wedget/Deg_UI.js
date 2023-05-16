@@ -11,7 +11,7 @@ import Data from "../data/formComponent.json"
 function DegUI(props) {
     library.add(faObjectUngroup, faStar, faLayerGroup);
 
-    const { next, back,data ,prices} = props;
+    const { next,data ,prices} = props;
     const [selectedItems, setSelectedItems] = useState();
 
 
@@ -22,9 +22,7 @@ function DegUI(props) {
         console.log(selectedItems)
     }, [selectedItems])
 
-    const show = () => {
-        console.log(selectedItems)
-    };
+
 
     const goToNext = async () => {
         await prices(selectedItems)
@@ -56,8 +54,6 @@ function DegUI(props) {
 
             </div>
             <div style={{ marginTop: "20px" }}>
-                <button onClick={back}>presedent</button>
-                <button onClick={show}>show selected</button>
                 <button onClick={goToNext}>Suivant</button>
             </div>
         </>

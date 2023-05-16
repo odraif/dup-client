@@ -33,9 +33,6 @@ function Platform(props) {
     useEffect(() => {
         console.log(selectedItems);
     }, [selectedItems])
-    const show = () => {
-        console.log(selectedItems);
-    }
     const goToNext = async () => {
         await data((prevChildData) => ({
             ...prevChildData,
@@ -69,7 +66,6 @@ function Platform(props) {
 
             </div>
             <div style={{ marginTop: "20px" }}>
-                <button onClick={show}>show selected</button>
                 <button onClick={goToNext}>Suivant</button>
             </div>
         </>

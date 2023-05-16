@@ -52,7 +52,7 @@ function Features(props) {
         faArrowRightToBracket
     );
 
-    const { data, next, back, prices, oldprices, updatePrice } = props;
+    const { data, next, prices, oldprices, updatePrice } = props;
     const [selectedItems, setSelectedItems] = useState([]);
 
 
@@ -76,9 +76,7 @@ function Features(props) {
     useEffect(() => {
         console.log(selectedItems)
     }, [selectedItems])
-    const show = () => {
-        console.log(selectedItems)
-    }
+
     const goToNext = async () => {
         await data((prevChildData) => ({
             ...prevChildData,
@@ -110,8 +108,6 @@ function Features(props) {
 
                 </div>
                 <div style={{ marginTop: "20px" }}>
-                    <button onClick={back}>presedent</button>
-                    <button onClick={show}>show selected</button>
                     <button onClick={goToNext}>Suivant</button>
                 </div>
             </div>
