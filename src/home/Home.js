@@ -14,6 +14,9 @@ function Home() {
     const backpage = () => {
         setpage(page - 1)
     }
+    const custpage = (val) => {
+        setpage(val)
+    }
 
 
     switch (page) {
@@ -22,7 +25,7 @@ function Home() {
                 <>
                     <div>
                         <div>
-                            <NavBar></NavBar>
+                            <NavBar go={custpage}></NavBar>
                         </div>
                         <div className="introCentre">
                             <FirstContent
@@ -32,7 +35,7 @@ function Home() {
                     </div>
                 </>
             )
-        case 1:
+        case 1://calculator
             return (
                 <>
                 

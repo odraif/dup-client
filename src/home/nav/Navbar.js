@@ -3,7 +3,8 @@ import logo from "./logo.png";
 import "./NavBar.css";
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
-function NavBar() {
+function NavBar(props) {
+    const {go}=props;
     const myFunction = () => {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
@@ -20,10 +21,10 @@ function NavBar() {
                     <Link to="" >
                         <img src={logo} alt="" className="logo" />
                     </Link>
-                        <Link to="" className="menu">Contact</Link>
-                        <Link to="/calculator" className="menu">Calculateur</Link>
-                        <Link to="" className="menu">A props</Link>
-                        <Link to="" className="menu">About us</Link>
+                        <Link  className="menu">Contact</Link>
+                        <Link onClick={()=>go(1)} className="menu">Calculateur</Link>
+                        <Link className="menu">A props</Link>
+                        <Link  className="menu">About us</Link>
                         <button className="icon" onClick={myFunction}>
                             <MenuIcon></MenuIcon>
                         </button>

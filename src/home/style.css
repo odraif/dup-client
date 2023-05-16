@@ -20,3 +20,8 @@
     cursor: pointer;
 }
 
+@media print{
+    .body-calcul{
+        background-color:transparent;
+    }
+}
