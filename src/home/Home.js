@@ -14,8 +14,10 @@ function Home() {
     const backpage = () => {
         setpage(page - 1)
     }
+
+
     switch (page) {
-        case 1:
+        default:
             return (
                 <>
                     <div>
@@ -30,7 +32,7 @@ function Home() {
                     </div>
                 </>
             )
-        case 2:
+        case 1:
             return (
                 <>
                 
