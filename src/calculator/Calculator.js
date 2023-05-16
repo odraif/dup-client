@@ -135,7 +135,7 @@ function Calculator() {
                         </tbody>
                         <tfoot></tfoot>
                         <tr>
-                            <th colSpan="2" style={{width:"60%"}}>Désignation</th>
+                            <th colSpan="2" style={{ width: "60%" }}>Désignation</th>
                             <th>TVA</th>
                             <th>HT</th>
                             <th>TTC</th>
@@ -144,7 +144,7 @@ function Calculator() {
                             <>
                                 <tr key={key}>
                                     <th>{key}</th>
-                                    <td style={{lineHeight:"17px"}}>
+                                    <td style={{ lineHeight: "17px" }}>
                                         {Array.isArray(formData[key])
                                             ? formData[key].map((item) => (
                                                 <>
@@ -152,18 +152,18 @@ function Calculator() {
                                                 </>
 
                                             ))
-                                            
+
                                             : (
                                                 <>
                                                     {formData[key].value + " "},
                                                 </>
 
                                             )}
-                                    
+
                                     </td>
                                     <td>20%</td>
                                     <td>
-                                        <p>{Number(calculatePriceSum(formData[key])/1.2).toFixed(2)}$</p>
+                                        <p>{Number(calculatePriceSum(formData[key]) / 1.2).toFixed(2)}$</p>
                                     </td>
                                     <td>
                                         <p>{Number(calculatePriceSum(formData[key])).toFixed(2)}$</p>
@@ -204,10 +204,7 @@ function Calculator() {
             </>
         );
     }
-    const showRes = () => {
-        console.log(formData);
-        console.log(userData);
-    }
+
 
     switch (currentStep) {
         case 1:
@@ -222,7 +219,7 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
-                    <button onClick={handleReset}>reset</button>
+                    <button onClick={handleReset} className="autbtn">reset</button>
                     {cout}
                 </>
             );
@@ -234,7 +231,7 @@ function Calculator() {
                         next={next}
                         prices={addprice}
                     />
-                    <button onClick={handleReset}>reset</button>
+                    <button onClick={handleReset} className="autbtn">reset</button>
                     {cout}
                 </>
             );
@@ -246,7 +243,7 @@ function Calculator() {
                         next={next}
                         prices={addprice}
                     />
-                    <button onClick={handleReset}>reset</button>
+                    <button onClick={handleReset} className="autbtn">reset</button>
                     {cout}
                 </>
             );
@@ -258,22 +255,24 @@ function Calculator() {
                         next={next}
                         prices={addprice}
                     />
-                    <button onClick={handleReset}>reset</button>
+                    <button onClick={handleReset} className="autbtn">reset</button>
                     {cout}
                 </>
             );
         case 5:
             return (
                 <>
-                    <Features
-                        data={handleData}
-                        next={next}
-                        prices={addprice}
-                        oldprices={price}
-                        updatePrice={updatePrice}
-                    />
-                    <button onClick={handleReset}>reset</button>
-                    {cout}
+                    <div className='printable-section'>
+                        <Features
+                            data={handleData}
+                            next={next}
+                            prices={addprice}
+                            oldprices={price}
+                            updatePrice={updatePrice}
+                        />
+                        <button onClick={handleReset} className="autbtn">reset</button>
+                        {cout}
+                    </div>
                 </>
             );
         case 6:
@@ -286,15 +285,14 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
-                    <button onClick={handleReset}>reset</button>
+                    <button onClick={handleReset} className="autbtn">reset</button>
                     {cout}
                 </>
             );
         case 7:
             return (
-                <>  <button onClick={() => { window.print() }} className='dont-print'>Print</button>
-                    <button onClick={handleReset} className='dont-print'>reset</button>
-                    <button onClick={showRes} className='dont-print'>list</button>
+                <>  <button onClick={() => { window.print() }} className='dont-print btn'>Print</button>
+                    <button onClick={handleReset} className='dont-print autbtn' >reset</button>
                     <div style={{ padding: "20px" }} className="printable-section">
                         <List></List>
                     </div>

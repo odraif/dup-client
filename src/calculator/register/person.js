@@ -110,8 +110,8 @@ function Person(props) {
                             <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("Adresse")} label="Adresse" variant="standard" margin="dense" />
                         </div>
                         <div>
-                            <button onClick={()=> back(0)}>Présedent</button>
-                            <input type="submit" value="Suivant" />
+                            <button onClick={()=> back(0)} className='autbtn'>Présedent</button>
+                            <input type="submit" value="Suivant" className='btn' />
                         </div>
                     </ThemeProvider>
                 </form>

@@ -70,8 +70,8 @@ function Services(props) {
                     ))}
 
                 </div>
-                <div style={{ marginTop: "20px" }}>
-                    <button onClick={goToNext}>envoyer</button>
+                <div style={{ marginTop: "20px" }} className="btnposition">
+                    <button onClick={goToNext} className="btn">envoyer</button>
                 </div>
             </div>
         </>

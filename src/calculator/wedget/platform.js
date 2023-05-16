@@ -65,8 +65,8 @@ function Platform(props) {
                 ))}
 
             </div>
-            <div style={{ marginTop: "20px" }}>
-                <button onClick={goToNext}>Suivant</button>
+            <div style={{ marginTop: "20px" }} className="btnposition">
+                <button onClick={goToNext} className="btn">Suivant</button>
             </div>
         </>
     )

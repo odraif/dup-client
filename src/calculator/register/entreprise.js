@@ -116,8 +116,8 @@ const Entreprise = (props) => {
                             <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("ResponsableServie")} label="Responsable du service" variant="standard" required margin="dense" />
                         </div>
                         <div>
-                            <button onClick={()=> back(0)}>Présedent</button>
-                            <input type="submit" value="Suivant" />
+                            <button onClick={()=> back(0)} className='autbtn'>Présedent</button>
+                            <input type="submit" value="Suivant" className='btn'/>
                         </div>
                     </ThemeProvider>
                 </form>

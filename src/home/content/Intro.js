@@ -22,7 +22,7 @@ export default function FirstContent(props) {
                     <Button
                         variant="outlined"
                         onClick={handlegoclick}
-                        className="m-auto mt-3"
+                        className="m-auto mt-3 animbutton"
                         style={{ borderColor: "#fff", color: "#fff", padding: "10px 20px", margin: "10px", minWidth: "100px", fontWeight: "bold" }}> Calculer le coût</Button>
                 </div>
             </div >

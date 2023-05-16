@@ -35,3 +35,14 @@
     margin-top: 10%;
     flex-wrap: wrap;
 }
+
+.btnposition{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+@media (max-width:600px){
+    .btnposition{
+    justify-content: center;
+    }
+}

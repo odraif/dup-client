@@ -28,6 +28,40 @@
     user-select: none;
     translate: 200ms;
   }
+.animbutton{
+  animation-name: shadow;
+  animation-duration: 1.5s ;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition: 200ms;
+}
+.animbutton:hover{
+    box-shadow: 0 0 10px #fff inset;
+}
+
+@keyframes shadow {
+  0%   {
+    box-shadow: 0 0 0px #fff ;
+    text-shadow:0 0 0px #fff ;
+}
+  25%  {
+    box-shadow: 0 0 5px #fff;
+    text-shadow:0 0 5px #fff;
+}
+  50%  {
+    box-shadow: 0 0 5px #fff;
+    text-shadow:0 0 10px #fff;
+}
+  75%  {
+    box-shadow: 0 0 5px #fff;
+    text-shadow: 0 0 5px #fff;
+}
+  100% {
+    box-shadow: 0 0 0px #fff;
+    text-shadow: 0 0 0px #fff;
+}
+}
+
 @media (max-width:900px) {
     .introCentre {
         flex-direction: column;
