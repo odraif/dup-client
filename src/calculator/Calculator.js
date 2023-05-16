@@ -97,7 +97,8 @@ function Calculator() {
         const fullc = String(day) + "/" + String(month + 1) + "/" + String(year);
         const full = fullc;
         const time = String(hour) + ":" + String(minute) + ":" + String(seconds);
-        const Slice = String(year).slice(2, 4) + String(month + 1) + "-" + "020";
+        const Slice = String(year).slice(2, 4) 
+        const dstime = Slice + String(month + 1) + "- 020";
 
         return (
             <>
@@ -107,7 +108,7 @@ function Calculator() {
                             <img src={Logo} alt='' style={{ width: "50px" }} />
                         </div>
                         <div>
-                            <h3>Devis DV{Slice}</h3>
+                            <h3>Devis DV{dstime}</h3>
                             <p>Date de creation:{full} {time}</p>
                         </div>
                     </div>
@@ -122,9 +123,12 @@ function Calculator() {
                         </div>
                         <div style={{ width: "300px", padding: "10px" }}>
                             {Object.entries(userData).map(([key, value]) => (
-                                <p key={key}>
-                                    <strong>{key}:</strong> {value}
-                                </p>
+                                <div key={key}>
+                                    <p>
+                                        <strong>{key}:</strong> {value}
+                                    </p>
+                                </div>
+
                             ))}
                         </div>
                     </div>
@@ -301,10 +305,10 @@ function Calculator() {
         default:
             return (
                 <>
-                        <Type
-                            next={next}
-                            data={handleUserData}
-                        ></Type>
+                    <Type
+                        next={next}
+                        data={handleUserData}
+                    ></Type>
                 </>
             )
     }
