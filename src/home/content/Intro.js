@@ -1,40 +1,30 @@
 import React from "react";
 import Button from '@mui/material/Button';
-import Pic from "./circuit-icon-png-18.png"
-import TV from "./digital_home.mp4"
+import Pic from "./circuit-icon-png-18.png";
 import "./intro.css";
-import { useNavigate } from "react-router-dom";
+import Backv from "./backv";
 
-export default function FirstContent() {
-    const go = useNavigate();
+export default function FirstContent(props) {
+    const {next}=props;
+
     const handlegoclick =()=>{
-        go("/calculator");
+        next()
     }
     return (
         <>
-            <div dangerouslySetInnerHTML={{
-                __html: `
-        <video
-          loop
-          muted
-          autoplay
-          playsinline
-          src="${TV}"
-          class="home_Video"
-        />,
-      ` }}></div>
+        <Backv></Backv>
             <div className="introCentre" >
                 <img src={Pic} alt="digital marketing" />
                 <div className="introBtn">
                     <Button
                         variant="contained"
                         className="m-auto"
-                        style={{ margin: "10px", padding: "10px 20px", minWidth: "300px", backgroundColor: "#fff", color: "#041560", fontWeight: "bold" }}> Nos projet</Button>
+                        style={{ margin: "10px", padding: "10px 20px", minWidth: "100px", backgroundColor: "#fff", color: "#041560", fontWeight: "bold" }}> Nos projet</Button>
                     <Button
                         variant="outlined"
                         onClick={handlegoclick}
                         className="m-auto mt-3"
-                        style={{ borderColor: "#fff", color: "#fff", padding: "10px 20px", margin: "10px", minWidth: "300px", fontWeight: "bold" }}> Calculer le coût</Button>
+                        style={{ borderColor: "#fff", color: "#fff", padding: "10px 20px", margin: "10px", minWidth: "100px", fontWeight: "bold" }}> Calculer le coût</Button>
                 </div>
             </div >
         </>

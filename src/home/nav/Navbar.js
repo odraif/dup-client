@@ -14,7 +14,7 @@ function NavBar() {
     }
     return (
         <>
-            <header>
+            <header className='dont-print'>
                 <nav>
                     <div className="topnav" id="myTopnav">
                     <Link to="" >

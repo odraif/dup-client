@@ -7,7 +7,7 @@ import { faBuilding } from '@fortawesome/free-regular-svg-icons';
 import "../style/form.css"
 const Type = (props) => {
     const [choice, setchoice] = useState(0);
-    const { next,data } = props
+    const { next, data } = props
 
     switch (choice) {
         case 1:
@@ -17,14 +17,16 @@ const Type = (props) => {
         default:
             return (
                 <>
-                    <button className='choiceButton' onClick={async () => setchoice(1)}>
-                        <FontAwesomeIcon icon={faUser} />
-                        <br></br>
-                        person</button>
-                    <button className='choiceButton' onClick={async () => setchoice(2)}>
-                        <FontAwesomeIcon icon={faBuilding} />
-                        <br></br>
-                        entreprise</button>
+                    <div className='cont'>
+                        <button className='choiceButton' style={{minWidth:"150px"}} onClick={async () => setchoice(1)}>
+                            <FontAwesomeIcon icon={faUser} />
+                            <br></br>
+                            person</button>
+                        <button className='choiceButton' style={{minWidth:"150px"}} onClick={async () => setchoice(2)}>
+                            <FontAwesomeIcon icon={faBuilding} />
+                            <br></br>
+                            entreprise</button>
+                    </div>
                 </>
             );
     }

@@ -87,3 +87,8 @@ div.radio-with-Icon p.radioOption-Item input[type="checkbox"]+label:before,
 div.radio-with-Icon p.radioOption-Item input[type="checkbox"]+label:after {
     margin: 0 !important;
 }
+
+.view-card{
+    overflow-y: auto;
+    height: 200px;
+}
