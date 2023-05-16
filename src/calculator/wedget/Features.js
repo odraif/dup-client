@@ -88,30 +88,32 @@ function Features(props) {
     }
     return (
         <>
-            <div className="radio-with-Icon flex-w">
-                {Data && Data.Features.map((item) => (
-                    <p className="radioOption-Item" key={item.id}>
-                        <input
-                            type="checkbox"
-                            name="Platform"
-                            id={item.value}
-                            value={item}
-                            className="ng-valid ng-dirty ng-touched ng-empty"
-                            checked={selectedItems.includes(item)}
-                            onChange={event => handleCheckboxChange(event, item)}
-                        />
-                        <label htmlFor={item.value}>
-                            <FontAwesomeIcon icon={[item.type, item.icon]} className="calicon" />
-                            {item.value}
-                        </label>
-                    </p>
-                ))}
+            <div className="view-card">
+                <div className="radio-with-Icon flex-w">
+                    {Data && Data.Features.map((item) => (
+                        <p className="radioOption-Item" key={item.id}>
+                            <input
+                                type="checkbox"
+                                name="Platform"
+                                id={item.value}
+                                value={item}
+                                className="ng-valid ng-dirty ng-touched ng-empty"
+                                checked={selectedItems.includes(item)}
+                                onChange={event => handleCheckboxChange(event, item)}
+                            />
+                            <label htmlFor={item.value}>
+                                <FontAwesomeIcon icon={[item.type, item.icon]} className="calicon" />
+                                {item.value}
+                            </label>
+                        </p>
+                    ))}
 
-            </div>
-            <div style={{ marginTop: "20px" }}>
-                <button onClick={back}>presedent</button>
-                <button onClick={show}>show selected</button>
-                <button onClick={goToNext}>Suivant</button>
+                </div>
+                <div style={{ marginTop: "20px" }}>
+                    <button onClick={back}>presedent</button>
+                    <button onClick={show}>show selected</button>
+                    <button onClick={goToNext}>Suivant</button>
+                </div>
             </div>
         </>
     )

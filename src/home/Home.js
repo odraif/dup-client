@@ -2,8 +2,9 @@ import { useState } from "react";
 import FirstContent from "./content/Intro";
 import NavBar from "./nav/Navbar";
 import Calculator from "../calculator/Calculator";
-import Backv from "./content/backv";
 import "./style.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
     const [page, setpage] = useState(1);
@@ -24,7 +25,6 @@ function Home() {
                         <div className="introCentre">
                             <FirstContent
                             next={nextpage}
-                            back={backpage}
                             ></FirstContent>
                         </div>
                     </div>
@@ -38,11 +38,11 @@ function Home() {
                         <div>
                             <NavBar></NavBar>
                         </div>
+                        <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow" onClick={()=> backpage()} title="Home page"></FontAwesomeIcon></div>
                         <div className="body-calcul">
                             <Calculator ></Calculator>
                         </div>
                     </div>
-                    <Backv></Backv>
                 </>
             )
     }

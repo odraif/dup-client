@@ -2,7 +2,7 @@ import React from "react";
 import Button from '@mui/material/Button';
 import Pic from "./circuit-icon-png-18.png";
 import "./intro.css";
-import Backv from "./backv";
+
 
 export default function FirstContent(props) {
     const {next}=props;
@@ -12,7 +12,6 @@ export default function FirstContent(props) {
     }
     return (
         <>
-        <Backv></Backv>
             <div className="introCentre" >
                 <img src={Pic} alt="digital marketing" />
                 <div className="introBtn">

@@ -7,3 +7,15 @@
     background-color: rgba(107, 106, 106, 0.322);
     border-radius: 12px;
 }
+.back-arrow{
+    position: absolute;
+    z-index: 100!important;
+    color: rgba(153, 153, 153, 0.575);
+    font-size: 50px;
+    top:50%;
+    left: 1%;
+}
+.back-arrow:hover{
+    color: rgb(153, 153, 153);
+    cursor: pointer;
+}
