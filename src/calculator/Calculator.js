@@ -134,6 +134,13 @@ function Calculator() {
                         <tbody>
                         </tbody>
                         <tfoot></tfoot>
+
+                        <tr>
+                            <td style={{ border: "none" }}></td>
+                            <td style={{ border: "none" }}></td>
+                            <td style={{ border: "none" }}></td>
+                            <td colSpan="2" style={{ fontSize: "12px",border: "none",textAlign:"end" }}>Montants exprimés en Dirham</td>
+                        </tr>
                         <tr>
                             <th colSpan="2" style={{ width: "60%" }}>Désignation</th>
                             <th>TVA</th>
@@ -163,10 +170,10 @@ function Calculator() {
                                     </td>
                                     <td>20%</td>
                                     <td>
-                                        <p>{Number(calculatePriceSum(formData[key]) / 1.2).toFixed(2)}$</p>
+                                        <p>{Number(calculatePriceSum(formData[key]) / 1.2).toFixed(2)}</p>
                                     </td>
                                     <td>
-                                        <p>{Number(calculatePriceSum(formData[key])).toFixed(2)}$</p>
+                                        <p>{Number(calculatePriceSum(formData[key])).toFixed(2)}</p>
                                     </td>
                                 </tr>
 
@@ -177,25 +184,25 @@ function Calculator() {
                             <td style={{ border: "none" }}></td>
                             <td style={{ border: "none" }} colSpan="2"><p>Total HT </p></td>
 
-                            <td style={{ border: "none" }}><p>{(Number(cout) / 1.2).toFixed(2)}$</p></td>
+                            <td style={{ border: "none" }}><p>{(Number(cout) / 1.2).toFixed(2)}</p></td>
                         </tr>
                         <tr>
                             <td style={{ border: "none" }}></td>
                             <td style={{ border: "none" }}></td>
                             <td style={{ border: "none" }} colSpan="2"><p>Total TVA 20% </p></td>
 
-                            <td style={{ border: "none" }}><p>{(Number(cout) - (Number(cout) / 1.2)).toFixed(2)}$</p></td>
+                            <td style={{ border: "none" }}><p>{(Number(cout) - (Number(cout) / 1.2)).toFixed(2)}</p></td>
                         </tr>
                         <tr>
                             <td style={{ border: "none" }}></td>
                             <td style={{ border: "none" }}></td>
                             <td style={{ border: "none" }} colSpan="2"><p>Total TTC </p></td>
 
-                            <td style={{ border: "none" }}><p>{Number(cout).toFixed(2)}$</p></td>
+                            <td style={{ border: "none" }}><p>{Number(cout).toFixed(2)}</p></td>
                         </tr>
                     </table >
                 </div>
-                <div style={{ marginTop: "40%" }}>
+                <div style={{ marginTop: "35%" }}>
                     <div style={{ textAlign: "center" }}>
                         <p style={{ lineHeight: "2px", fontSize: "10px" }}>Capital de 10 000 MAD-R.C.:2571-Patente:49704318</p>
                         <p style={{ lineHeight: "2px", fontSize: "10px" }}>I.F.:51708439-ICE:003003499000049-Numéro TVA:51708430</p>
