@@ -41,7 +41,7 @@ function Home() {
                 
                     <div>
                         <div>
-                            <NavBar></NavBar>
+                            <NavBar go={custpage}></NavBar>
                         </div>
                         <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow dont-print" onClick={()=> backpage()} title="Home page"></FontAwesomeIcon></div>
                         <div className="body-calcul">

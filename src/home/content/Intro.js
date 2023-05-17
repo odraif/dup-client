@@ -6,6 +6,7 @@ import "./intro.css";
 
 export default function FirstContent(props) {
     const {next}=props;
+    document.title="Home | Bienvevue"
 
     const handlegoclick =()=>{
         next()

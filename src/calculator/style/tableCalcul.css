@@ -22,11 +22,30 @@ td {
   overflow-y: auto;
   height: 80%;
 }
+.cout-viewer{
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 5%;
+  background-color: rgba(0, 0, 0, 0.329);
+  border-radius: 20px;
+  width: 60%;
+  padding: 10px;
+  position: relative;
+}
+.cout-viewer p{
+  color: #fff;
+  font-weight: bold;
+}
 
 @media (max-width:600px) {
   .centerbtn{
     display: flex;
     justify-content: center;
+  }
+  .cout-viewer{
+    width: 85%;
+    margin-top: 15%;
   }
 }
 

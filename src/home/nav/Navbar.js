@@ -18,8 +18,8 @@ function NavBar(props) {
             <header className='dont-print'>
                 <nav>
                     <div className="topnav" id="myTopnav">
-                    <Link to="" >
-                        <img src={logo} alt="" className="logo" />
+                    <Link onClick={()=>go(0)} >
+                        <img src={logo} alt="dup logo" className="logo" />
                     </Link>
                         <Link  className="menu">Contact</Link>
                         <Link onClick={()=>go(1)} className="menu">Calculateur</Link>

@@ -139,7 +139,7 @@ function Calculator() {
                             <td style={{ border: "none" }}></td>
                             <td style={{ border: "none" }}></td>
                             <td style={{ border: "none" }}></td>
-                            <td colSpan="2" style={{ fontSize: "12px",border: "none",textAlign:"end" }}>Montants exprimés en Dirham</td>
+                            <td colSpan="2" style={{ fontSize: "13px", border: "none", textAlign: "end", lineHeight: "10px" }}>Montants exprimés en Dirham</td>
                         </tr>
                         <tr>
                             <th colSpan="2" style={{ width: "60%" }}>Désignation</th>
@@ -204,7 +204,7 @@ function Calculator() {
                 </div>
                 <div style={{ marginTop: "35%" }}>
                     <div style={{ textAlign: "center" }}>
-                        <p style={{ lineHeight: "2px", fontSize: "10px" }}>Capital de 10 000 MAD-R.C.:2571-Patente:49704318</p>
+                        <p style={{ lineHeight: "2px", fontSize: "10px" }}>Capital de 10 000 MAD-R.C.:25271-Patente:49704138</p>
                         <p style={{ lineHeight: "2px", fontSize: "10px" }}>I.F.:51708439-ICE:003003499000049-Numéro TVA:51708430</p>
                     </div >
                 </div>
@@ -229,8 +229,12 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
-                    <button onClick={handleReset} className="autbtn">reset</button>
-                    {cout}
+                    <div className='cout-viewer'>
+                        <p>
+                            {"Le cout: " + cout}DH
+                        </p>
+                        <button onClick={handleReset} className="autbtn">reset</button>
+                    </div>
                 </>
             );
         case 2:
@@ -244,8 +248,12 @@ function Calculator() {
                         next={next}
                         prices={addprice}
                     />
-                    <button onClick={handleReset} className="autbtn">reset</button>
-                    {cout}
+                    <div className='cout-viewer'>
+                        <p>
+                            {"Le cout: " + cout}DH
+                        </p>
+                        <button onClick={handleReset} className="autbtn">reset</button>
+                    </div>
                 </>
             );
         case 3:
@@ -259,8 +267,12 @@ function Calculator() {
                         next={next}
                         prices={addprice}
                     />
-                    <button onClick={handleReset} className="autbtn">reset</button>
-                    {cout}
+                    <div className='cout-viewer'>
+                        <p>
+                            {"Le cout: " + cout}DH
+                        </p>
+                        <button onClick={handleReset} className="autbtn">reset</button>
+                    </div>
                 </>
             );
         case 4:
@@ -274,8 +286,12 @@ function Calculator() {
                         next={next}
                         prices={addprice}
                     />
-                    <button onClick={handleReset} className="autbtn">reset</button>
-                    {cout}
+                    <div className='cout-viewer'>
+                        <p>
+                            {"Le cout: " + cout}DH
+                        </p>
+                        <button onClick={handleReset} className="autbtn">reset</button>
+                    </div>
                 </>
             );
         case 5:
@@ -291,9 +307,11 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
-                    <div>
+                    <div className='cout-viewer'>
+                        <p>
+                            {"Le cout: " + cout}DH
+                        </p>
                         <button onClick={handleReset} className="autbtn">reset</button>
-                        <p>{cout}</p>
                     </div>
                 </>
             );
@@ -310,8 +328,12 @@ function Calculator() {
                         oldprices={price}
                         updatePrice={updatePrice}
                     />
-                    <button onClick={handleReset} className="autbtn">reset</button>
-                    {cout}
+                    <div className='cout-viewer'>
+                        <p>
+                            {"Le cout: " + cout}DH
+                        </p>
+                        <button onClick={handleReset} className="autbtn">reset</button>
+                    </div>
                 </>
             );
         case 7:

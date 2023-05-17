@@ -92,7 +92,7 @@ div.radio-with-Icon p.radioOption-Item input[type="checkbox"]+label:after {
 
 
 
-@media (max-width:600px) {
+@media (max-width:1000px) {
     div.radio-with-Icon {
         display: flex;
         flex-wrap: wrap;
@@ -100,7 +100,7 @@ div.radio-with-Icon p.radioOption-Item input[type="checkbox"]+label:after {
     }
     .view-card{
         overflow-y: auto;
-        height: 90%;
+        height: 60%;
         text-align: center;
     }
 }
