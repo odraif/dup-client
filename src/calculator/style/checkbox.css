@@ -22,7 +22,7 @@ div.radio-with-Icon p.radioOption-Item {
 div.radio-with-Icon p.radioOption-Item label {
     display: block;
     height: 100%;
-    width: 100%;
+    width: 300px;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #099292;

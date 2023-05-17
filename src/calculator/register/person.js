@@ -109,7 +109,7 @@ function Person(props) {
                         <div className="group">
                             <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("Adresse")} label="Adresse" variant="standard" margin="dense" />
                         </div>
-                        <div>
+                        <div className='groupbtn'>
                             <button onClick={()=> back(0)} className='autbtn'>Présedent</button>
                             <input type="submit" value="Suivant" className='btn' />
                         </div>

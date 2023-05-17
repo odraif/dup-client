@@ -11,13 +11,13 @@ import Data from "../data/formComponent.json"
 function DegUI(props) {
     library.add(faObjectUngroup, faStar, faLayerGroup);
 
-    const { next,data ,prices} = props;
+    const { next, data, prices } = props;
     const [selectedItems, setSelectedItems] = useState();
 
 
-    function handleRadioChange(event,radio) {
+    function handleRadioChange(event, radio) {
         setSelectedItems(radio)
-      };
+    };
     useEffect(() => {
         console.log(selectedItems)
     }, [selectedItems])
@@ -29,7 +29,7 @@ function DegUI(props) {
         await data((prevChildData) => ({
             ...prevChildData,
             DegUI: selectedItems,
-          }));
+        }));
         await next()
     };
     return (
@@ -47,7 +47,10 @@ function DegUI(props) {
                         />
                         <label htmlFor={item.value}>
                             <FontAwesomeIcon icon={[item.type, item.icon]} className="calicon" />
-                            {item.value}
+                            <div style={{ display: "flex", flexDirection: "column", marginTop: "-10px" }}>
+                                <p><strong>{item.value}</strong></p>
+                                <p style={{ marginTop: "-10px" }}>{item.price}DH</p>
+                            </div>
                         </label>
                     </p>
                 ))}

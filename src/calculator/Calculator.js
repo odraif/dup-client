@@ -212,6 +212,9 @@ function Calculator() {
             return (
 
                 <>
+                    <div style={{ marginTop: "5%" }}>
+                        <h3 style={{ textAlign: "center", color: "white" }}>Pour quelles plateformes souhaitez-vous développer le produit ?</h3>
+                    </div>
                     <Platform
                         data={handleData}
                         next={next}
@@ -226,6 +229,9 @@ function Calculator() {
         case 2:
             return (
                 <>
+                    <div style={{ marginTop: "5%" }}>
+                        <h3 style={{ textAlign: "center", color: "white" }}>Que voulez-vous obtenir ?</h3>
+                    </div>
                     <Needed
                         data={handleData}
                         next={next}
@@ -238,6 +244,9 @@ function Calculator() {
         case 3:
             return (
                 <>
+                    <div style={{ marginTop: "5%" }}>
+                        <h3 style={{ textAlign: "center", color: "white" }}>Combien d'écrans uniques y aura-t-il dans l'application ?</h3>
+                    </div>
                     <Npage
                         data={handleData}
                         next={next}
@@ -250,6 +259,9 @@ function Calculator() {
         case 4:
             return (
                 <>
+                    <div style={{ marginTop: "5%" }}>
+                        <h3 style={{ textAlign: "center", color: "white" }}>Quel est le degré de développement de l'interface de l'application ?</h3>
+                    </div>
                     <DegUI
                         data={handleData}
                         next={next}
@@ -262,22 +274,28 @@ function Calculator() {
         case 5:
             return (
                 <>
-                    <div className='printable-section'>
-                        <Features
-                            data={handleData}
-                            next={next}
-                            prices={addprice}
-                            oldprices={price}
-                            updatePrice={updatePrice}
-                        />
+                    <div style={{ marginTop: "5%" }}>
+                        <h3 style={{ textAlign: "center", color: "white" }}>Quelles fonctionnalités souhaitez-vous inclure dans l'application ?</h3>
+                    </div>
+                    <Features
+                        data={handleData}
+                        next={next}
+                        prices={addprice}
+                        oldprices={price}
+                        updatePrice={updatePrice}
+                    />
+                    <div>
                         <button onClick={handleReset} className="autbtn">reset</button>
-                        {cout}
+                        <p>{cout}</p>
                     </div>
                 </>
             );
         case 6:
             return (
                 <>
+                    <div style={{ marginTop: "5%" }}>
+                        <h3 style={{ textAlign: "center", color: "white" }}>Avec quelles services tiers devez-vous interagir ?</h3>
+                    </div>
                     <Services
                         data={handleData}
                         next={next}
@@ -291,8 +309,10 @@ function Calculator() {
             );
         case 7:
             return (
-                <>  <button onClick={() => { window.print() }} className='dont-print btn'>Print</button>
-                    <button onClick={handleReset} className='dont-print autbtn' >reset</button>
+                <>
+                    <div className='centerbtn'>
+                        <button onClick={() => { window.print() }} className='dont-print btn'>Print</button>
+                    </div>
                     <div style={{ padding: "20px" }} className="printable-section">
                         <List></List>
                     </div>

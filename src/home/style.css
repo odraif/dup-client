@@ -6,6 +6,7 @@
     height: 80%;
     background-color: rgba(107, 106, 106, 0.322);
     border-radius: 12px;
+    backdrop-filter: blur(10px);
 }
 .back-arrow{
     position: absolute;
@@ -50,6 +51,7 @@
     font-size: 15px;
     transition: 200ms;
     margin: 5px;
+    
 }
 .autbtn:hover{
     color: #027472;
@@ -60,5 +62,9 @@
     .btn {
     width: 250px;
     margin-top: 30px;
+    }
+    .groupbtn{
+        display: flex;
+        flex-direction: column-reverse;
     }
 }

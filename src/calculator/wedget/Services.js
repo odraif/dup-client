@@ -37,7 +37,7 @@ function Services(props) {
         }
     }
     useEffect(() => {
-        
+
     }, [selectedItems])
     const goToNext = async () => {
         await data((prevChildData) => ({
@@ -64,14 +64,17 @@ function Services(props) {
                             />
                             <label htmlFor={item.value}>
                                 <FontAwesomeIcon icon={[item.type, item.icon]} className="calicon" />
-                                {item.value}
+                                <div style={{ display: "flex", flexDirection: "column", marginTop: "-10px" }}>
+                                    <p><strong>{item.value}</strong></p>
+                                    <p style={{ marginTop: "-10px" }}>{item.price}DH</p>
+                                </div>
                             </label>
                         </p>
                     ))}
 
                 </div>
                 <div style={{ marginTop: "20px" }} className="btnposition">
-                    <button onClick={goToNext} className="btn">envoyer</button>
+                    <button onClick={goToNext} className="btn">Envoyer</button>
                 </div>
             </div>
         </>

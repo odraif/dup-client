@@ -48,7 +48,10 @@ function Needed(props) {
                         />
                         <label htmlFor={item.value}>
                             <FontAwesomeIcon icon={[item.type, item.icon]} className="calicon" />
-                            {item.value}
+                            <div style={{display:"flex",flexDirection:"column",marginTop:"-10px"}}>
+                                <p><strong>{item.value}</strong></p>
+                                <p style={{marginTop:"-10px"}}>{item.price}DH</p>
+                            </div>
                         </label>
                     </p>
                 ))}
