@@ -116,7 +116,6 @@ function Calculator() {
                             <h5>-8000 AGADIR MAROC</h5>
                             <h5>80000 AGADIR</h5>
                             <h5>Tél: 0761513522</h5>
-
                         </div>
                         <div style={{ width: "300px", padding: "10px" }}>
                             {Object.entries(userData).map(([key, value]) => (

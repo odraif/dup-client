@@ -24,7 +24,7 @@ function NavBar(props) {
                         <Link  className="menu">Contact</Link>
                         <Link onClick={()=>go(1)} className="menu">Calculateur</Link>
                         <Link className="menu">A props</Link>
-                        <Link  className="menu">About us</Link>
+                        <Link onClick={()=>go(2)} className="menu">Nos projet</Link>
                         <button className="icon" onClick={myFunction}>
                             <MenuIcon></MenuIcon>
                         </button>
