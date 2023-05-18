@@ -5,15 +5,11 @@ import Calculator from "../calculator/Calculator";
 import "./style.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import NP from "../nosprojet/NP";
 
 function Home() {
     const [page, setpage] = useState(0);
-    const nextpage = () => {
-        setpage(page + 1)
-    }
-    const backpage = () => {
-        setpage(page - 1)
-    }
+
     const custpage = (val) => {
         setpage(val)
     }
@@ -29,7 +25,7 @@ function Home() {
                         </div>
                         <div className="introCentre">
                             <FirstContent
-                            next={nextpage}
+                            next={custpage}
                             ></FirstContent>
                         </div>
                     </div>
@@ -43,12 +39,24 @@ function Home() {
                         <div>
                             <NavBar go={custpage}></NavBar>
                         </div>
-                        <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow dont-print" onClick={()=> backpage()} title="Home page"></FontAwesomeIcon></div>
+                        <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow dont-print" onClick={()=> custpage(0)} title="Home page"></FontAwesomeIcon></div>
                         <div className="body-calcul">
                             <Calculator ></Calculator>
                         </div>
                     </div>
                 </>
+            )
+        case 2:
+            return(
+                <div>
+                <div>
+                    <NavBar go={custpage}></NavBar>
+                </div>
+                <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow dont-print" onClick={()=> custpage(0)} title="Home page"></FontAwesomeIcon></div>
+                <div className="body-calcul">
+                    <NP></NP>
+                </div>
+            </div>
             )
     }
 

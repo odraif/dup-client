@@ -8,8 +8,8 @@ export default function FirstContent(props) {
     const {next}=props;
     document.title="Home | Bienvevue"
 
-    const handlegoclick =()=>{
-        next()
+    const handlegoclick =(val)=>{
+        next(val)
     }
     return (
         <>
@@ -19,10 +19,11 @@ export default function FirstContent(props) {
                     <Button
                         variant="contained"
                         className="m-auto"
+                        onClick={async () => {handlegoclick(2)}}
                         style={{ margin: "10px", padding: "10px 20px", minWidth: "100px", backgroundColor: "#fff", color: "#041560", fontWeight: "bold" }}> Nos projet</Button>
                     <Button
                         variant="outlined"
-                        onClick={handlegoclick}
+                        onClick={async () => {handlegoclick(1)}}
                         className="m-auto mt-3 animbutton"
                         style={{ borderColor: "#fff", color: "#fff", padding: "10px 20px", margin: "10px", minWidth: "100px", fontWeight: "bold" }}> Calculer le coût</Button>
                 </div>
