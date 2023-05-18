@@ -9,6 +9,7 @@ const NP = () => {
     return (
         <>
             <div>
+                <hr></hr>
                 <h2 style={{ color: "#fff", marginLeft: "50px" }}>Site Web</h2>
                 <hr></hr>
                 <div>
@@ -183,6 +184,7 @@ const NP = () => {
                 </div>
             </div>
             <div>
+                <hr></hr>
                 <h2 style={{ color: "#fff", marginLeft: "50px" }}>Application</h2>
                 <hr></hr>
                 <div>
