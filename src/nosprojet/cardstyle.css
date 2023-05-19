@@ -85,6 +85,12 @@
   fill: transparent;
 }
 
+.my-swiper-navigation .swiper-button-prev, .my-swiper-navigation .swiper-button-next {
+  color: red;
+}
+
+
+
 @media (max-width:600px) {
   .card-container{
     width: 300px;

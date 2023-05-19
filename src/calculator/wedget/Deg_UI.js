@@ -13,28 +13,39 @@ function DegUI(props) {
 
     const { next, data, prices } = props;
     const [selectedItems, setSelectedItems] = useState();
+    const[button,setbutton] = useState(true)
 
 
     function handleRadioChange(event, radio) {
         setSelectedItems(radio)
+        setbutton(false)
     };
     useEffect(() => {
-        console.log(selectedItems)
-    }, [selectedItems])
+        var show = document.getElementById("anime");
+        setTimeout(()=>{
+            show.classList.remove("cardAnime");
+        },2000)
+    }, [])
 
 
 
     const goToNext = async () => {
+        var show = document.getElementById("anime");
         await prices(selectedItems)
         await data((prevChildData) => ({
             ...prevChildData,
             DegUI: selectedItems,
         }));
-        await next()
+
+        await show.classList.add("cardout");
+
+        await setTimeout(()=>{
+            next();
+        },1000 ) ;
     };
     return (
         <>
-            <div className="radio-with-Icon">
+            <div className="radio-with-Icon cardin" id="anime">
                 {Data && Data.DegUI.map((item) => (
                     <p className="radioOption-Item" key={item.id}>
                         <input
@@ -57,7 +68,7 @@ function DegUI(props) {
 
             </div>
             <div style={{ marginTop: "20px" }} className="btnposition">
-                <button onClick={goToNext} className="btn">Suivant</button>
+                <button onClick={goToNext} className="btn" disabled={button}>Suivant</button>
             </div>
         </>
     )

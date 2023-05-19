@@ -17,6 +17,7 @@ function Services(props) {
 
     const { data, next, prices, oldprices, updatePrice } = props;
     const [selectedItems, setSelectedItems] = useState([]);
+    const [button, setbutton] = useState(true)
 
 
 
@@ -26,6 +27,7 @@ function Services(props) {
         if (checked) {
             setSelectedItems([...selectedItems, box]);
             prices(box)
+            setbutton(false)
         } else {
             const updatedProducts = selectedItems.filter(
                 selectedItems => selectedItems !== box
@@ -37,20 +39,29 @@ function Services(props) {
         }
     }
     useEffect(() => {
+        var show = document.getElementById("anime");
+        setTimeout(() => {
+            show.classList.remove("cardAnime");
+        }, 2000)
+    }, [])
 
-    }, [selectedItems])
     const goToNext = async () => {
+        var show = document.getElementById("anime");
         await data((prevChildData) => ({
             ...prevChildData,
             Services: selectedItems,
         }));
-        await next();
+        await show.classList.add("cardout");
+
+        await setTimeout(() => {
+            next();
+        }, 1000);
     }
 
     return (
         <>
             <div className="view-card">
-                <div className="radio-with-Icon flex-w">
+                <div className="radio-with-Icon flex-w cardin" id="anime">
                     {Data && Data.Services.map((item) => (
                         <p className="radioOption-Item" key={item.id}>
                             <input
@@ -74,7 +85,7 @@ function Services(props) {
 
                 </div>
                 <div style={{ marginTop: "20px" }} className="btnposition">
-                    <button onClick={goToNext} className="btn">Envoyer</button>
+                    <button onClick={goToNext} className="btn" disabled={button}>Envoyer</button>
                 </div>
             </div>
         </>

@@ -11,6 +11,14 @@ function Platform(props) {
 
     const { data, next, prices, oldprices, updatePrice } = props;
     const [selectedItems, setSelectedItems] = useState([]);
+    const[button,setbutton] = useState(true)
+
+    useEffect(()=>{
+        var show = document.getElementById("anime");
+        setTimeout(()=>{
+            show.classList.remove("cardAnime");
+        },2000)
+    },[])
 
 
 
@@ -20,6 +28,7 @@ function Platform(props) {
         if (checked) {
             setSelectedItems([...selectedItems, box]);
             prices(box)
+            setbutton(false)
         } else {
             const updatedProducts = selectedItems.filter(
                 selectedItems => selectedItems !== box
@@ -30,22 +39,26 @@ function Platform(props) {
             }
         }
     }
-    useEffect(() => {
-        console.log(selectedItems);
-    }, [selectedItems])
+
     const goToNext = async () => {
+        var show = document.getElementById("anime");
         await data((prevChildData) => ({
             ...prevChildData,
             Platform: selectedItems,
         }));
+        
+        await show.classList.add("cardout");
 
-        await next();
+        await setTimeout(()=>{
+            next();
+        },1000 ) ;
+            
 
     }
 
     return (
         <>
-            <div className="radio-with-Icon">
+            <div className="radio-with-Icon cardin" id="anime">
                 {Data && Data.platforms.map((item) => (
                     <p className="radioOption-Item" key={item.id}>
                         <input
@@ -69,7 +82,7 @@ function Platform(props) {
 
             </div>
             <div style={{ marginTop: "20px" }} className="btnposition">
-                <button onClick={goToNext} className="btn">Suivant</button>
+                <button onClick={goToNext} className="btn" disabled={button}>Suivant</button>
             </div>
         </>
     )

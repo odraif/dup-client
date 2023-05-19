@@ -41,6 +41,10 @@
 .btn:hover{
     background-color: #027472;
 }
+.btn:disabled{
+    background-color: #c0c0c0;
+    color: #ebebeb;
+}
 .autbtn{
     background-color: transparent;
     color: #009997;

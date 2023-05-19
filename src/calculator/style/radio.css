@@ -18,7 +18,7 @@ div.radio-with-Icon p.radioOption-Item label {
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #099292;
-    color: #099292;
+    color: #ececec;
     cursor: pointer;
     opacity: .8;
     transition: none;
@@ -81,3 +81,43 @@ div.radio-with-Icon p.radioOption-Item input[type="radio"]+label:before,
 div.radio-with-Icon p.radioOption-Item input[type="radio"]+label:after {
     margin: 0 !important;
 }
+.cardin{
+    animation-name: cardin;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    transition: 300ms;
+  }
+  
+  @keyframes cardin {
+    from{
+      position: relative;
+      top:100px;
+      opacity: 0;
+      /* transform: scale(0.2); */
+    }
+    to{
+      position: relative;
+      top:0px;
+      opacity: 1;
+      /* transform: scale(1); */
+    }
+  }
+  .cardout{
+    animation-name: cardout;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    transition: 300ms;
+  }
+  
+  @keyframes cardout {
+    from{
+      position: relative;
+      left:0px;
+      opacity:1;
+    }
+    to{
+      position: relative;
+      left:-100px;
+      opacity: 0;
+    }
+  }
