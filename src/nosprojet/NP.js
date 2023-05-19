@@ -10,7 +10,7 @@ const NP = () => {
         <>
             <div>
                 <hr></hr>
-                <h2 style={{ color: "#fff", marginLeft: "50px" }}>Site Web</h2>
+                <h2 style={{ color: "#fff", margin: "-5px", marginLeft: "70px" }}>Site Web</h2>
                 <hr></hr>
                 <div>
                     <Swiper
@@ -18,211 +18,129 @@ const NP = () => {
                         navigation={true}
                         breakpoints={{
                             640: {
-                              slidesPerView: 1,
-                              spaceBetween: 100,
-                              centeredSlides:true
+                                slidesPerView: 1,
+                                spaceBetween: 100,
+                                centeredSlides: true
                             },
                             768: {
-                              slidesPerView: 2,
-                              spaceBetween: 200,
-                              centeredSlides:true
+                                slidesPerView: 2,
+                                spaceBetween: 400,
+                                centeredSlides: true
                             },
                             1024: {
-                              slidesPerView: 3,
-                              spaceBetween: 300,
-                              centeredSlides:true
+                                slidesPerView: 3,
+                                spaceBetween: 600,
+                                centeredSlides: true
                             },
-                          }}
+                        }}
                         modules={[Navigation, Pagination]}
                         className="mySwiper"
                     >
                         <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <img src="https://gcore.jsdelivr.net/gh/bestxtools/weekly-cn@main/images/2022-05-19-00-04-36.png" alt='' />
-                                    </div>
-                                    <div class="content">
-                                        {/* <p class="heading">Card Hover</p> */}
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipii
-                                            voluptas ten mollitia pariatur odit, ab
-                                            minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                            necessitatibus dignissimos molestias.
-                                        </p>
+                            <a href='https://localub.com/' target='blank'>
+                                <div className="card-container">
+                                    <div className="card">
+                                        <div className="img-content">
+                                            <img src="./cardimg/localub.png" alt='' />
+                                        </div>
+                                        <div class="content" style={{color:"#fff"}}>
+                                            <p>
+                                                Entreprise nationale d'énergie,
+                                                elle fournit des carburants et des
+                                                lubrifiants au niveau national. Outre
+                                                les différentes fournitures opérationnelles
+                                                de carburant et d'huile, elle est spécialisée dans
+                                                la vente, l'entretien et la réparation d'équipements
+                                                de stations-service.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
-                                    </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipii
-                                            voluptas ten mollitia pariatur odit, ab
-                                            minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                            necessitatibus dignissimos molestias.
-                                        </p>
+                            <a href='https://premiumautogarage.com/' target='blank'>
+                                <div className="card-container">
+                                    <div className="card">
+                                        <div className="img-content">
+                                            <img src='./cardimg/premium-auto-garage.png' alt='' />
+                                        </div>
+                                        <div className="content">
+                                            <p>
+                                            Premium Garage Auto est un spécialiste de la réparation automobile, 
+                                            notamment des pneus, des systèmes d’échappement, des freins,
+                                             de l’entretien des voitures, de la tolerie et la peinture.
+                                              Nous disposons également des derniers équipements de diagnostic
+                                               qui nous permettent d’entretenir et de réparer toutes les marques 
+                                               de véhicules.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
-                                    </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipii
-                                            voluptas ten mollitia pariatur odit, ab
-                                            minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                            necessitatibus dignissimos molestias.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
-                                    </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipii
-                                            voluptas ten mollitia pariatur odit, ab
-                                            minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                            necessitatibus dignissimos molestias.
-                                        </p>
+                            <a href='https://www.royalgolfagadir.com/' target='blank'>
+                                <div className="card-container">
+                                    <div className="card">
+                                        <div className="img-content">
+                                            <img src='./cardimg/Royal-Golf-Agadir.png' alt='' />
+                                        </div>
+                                        <div className="content">
+                                            <p className="heading">Card Hover</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipii
+                                                voluptas ten mollitia pariatur odit, ab
+                                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                                necessitatibus dignissimos molestias.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
-                                    </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipii
-                                            voluptas ten mollitia pariatur odit, ab
-                                            minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                            necessitatibus dignissimos molestias.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
-                                    </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipii
-                                            voluptas ten mollitia pariatur odit, ab
-                                            minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                            necessitatibus dignissimos molestias.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
-                                    </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipii
-                                            voluptas ten mollitia pariatur odit, ab
-                                            minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                            necessitatibus dignissimos molestias.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
-                                    </div>
-                                    <div class="content">
-                                        {/* <p class="heading">Card Hover</p> */}
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipii
-                                            voluptas ten mollitia pariatur odit, ab
-                                            minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                            necessitatibus dignissimos molestias.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </SwiperSlide>
                     </Swiper>
                 </div>
             </div>
             <div>
                 <hr></hr>
-                <h2 style={{ color: "#fff", marginLeft: "50px" }}>Application</h2>
+                <h2 style={{ color: "#fff", margin: "-5px", marginLeft: "70px" }}>Application</h2>
                 <hr></hr>
                 <div>
                     <Swiper
 
                         pagination={{
                             clickable: true,
-                          }}
-                        
+                        }}
+
                         navigation={true}
                         breakpoints={{
                             640: {
-                              slidesPerView: 1,
-                              spaceBetween: 100,
-                              centeredSlides:true
+                                slidesPerView: 1,
+                                spaceBetween: 100,
+                                centeredSlides: true
                             },
                             768: {
-                              slidesPerView: 2,
-                              spaceBetween: 200,
-                              centeredSlides:true
+                                slidesPerView: 2,
+                                spaceBetween: 200,
+                                centeredSlides: true
                             },
                             1024: {
-                              slidesPerView: 3,
-                              spaceBetween: 300,
-                              centeredSlides:true
+                                slidesPerView: 3,
+                                spaceBetween: 300,
+                                centeredSlides: true
                             },
-                          }}
+                        }}
                         modules={[Navigation, Pagination]}
                         className="mySwiper"
                     >
                         <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <img src="https://gcore.jsdelivr.net/gh/bestxtools/weekly-cn@main/images/2022-05-19-00-04-36.png" alt='' />
+                            <div className="card-container">
+                                <div className="card">
+                                    <div className="img-content">
+                                        <h1>Application vignette</h1>
                                     </div>
-                                    <div class="content">
-                                        {/* <p class="heading">Card Hover</p> */}
+                                    <div className="content">
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipii
                                             voluptas ten mollitia pariatur odit, ab
@@ -234,13 +152,12 @@ const NP = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
+                            <div className="card-container">
+                                <div className="card">
+                                    <div className="img-content">
+                                    <h1>Application journnée pompiste</h1>
                                     </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
+                                    <div className="content">
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipii
                                             voluptas ten mollitia pariatur odit, ab
@@ -252,13 +169,12 @@ const NP = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
+                            <div className="card-container">
+                                <div className="card">
+                                    <div className="img-content">
+                                    <h1>App shop</h1>
                                     </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
+                                    <div className="content">
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipii
                                             voluptas ten mollitia pariatur odit, ab
@@ -270,13 +186,13 @@ const NP = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
+                            <div className="card-container">
+                                <div className="card">
+                                    <div className="img-content">
+                                    <h1>App pointeuse</h1>
                                     </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
+                                    <div className="content">
+
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipii
                                             voluptas ten mollitia pariatur odit, ab
@@ -288,67 +204,12 @@ const NP = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
+                            <div className="card-container">
+                                <div className="card">
+                                    <div className="img-content">
+                                    <h1>App cafe</h1>
                                     </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipii
-                                            voluptas ten mollitia pariatur odit, ab
-                                            minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                            necessitatibus dignissimos molestias.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
-                                    </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipii
-                                            voluptas ten mollitia pariatur odit, ab
-                                            minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                            necessitatibus dignissimos molestias.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
-                                    </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipii
-                                            voluptas ten mollitia pariatur odit, ab
-                                            minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                            necessitatibus dignissimos molestias.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img-content">
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path></svg>
-                                    </div>
-                                    <div class="content">
-                                        <p class="heading">Card Hover</p>
+                                    <div className="content">
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipii
                                             voluptas ten mollitia pariatur odit, ab

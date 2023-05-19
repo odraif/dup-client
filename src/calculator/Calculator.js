@@ -99,7 +99,7 @@ function Calculator() {
 
         return (
             <>
-                <div >
+                <div style={{ backgroundColor: "#fff" ,padding:"10px"}}>
                     <div style={{ display: "flex", lineHeight: "2px", justifyContent: "space-between", marginBottom: "20px" }}>
                         <div>
                             <img src={Logo} alt='' style={{ width: "50px" }} />
@@ -154,14 +154,14 @@ function Calculator() {
                                         {Array.isArray(formData[key])
                                             ? formData[key].map((item) => (
                                                 <>
-                                                    {item.value + " "},
+                                                    {" "+item.value + " "}|
                                                 </>
 
                                             ))
 
                                             : (
                                                 <>
-                                                    {formData[key].value + " "},
+                                                    {" "+formData[key].value + " "}|
                                                 </>
 
                                             )}
@@ -200,12 +200,12 @@ function Calculator() {
                             <td style={{ border: "none" }}><p>{Number(cout).toFixed(2)}</p></td>
                         </tr>
                     </table >
-                </div>
-                <div style={{ marginTop: "35%" }}>
-                    <div style={{ textAlign: "center" }}>
-                        <p style={{ lineHeight: "2px", fontSize: "10px" }}>Capital de 10 000 MAD-R.C.:25271-Patente:49704138</p>
-                        <p style={{ lineHeight: "2px", fontSize: "10px" }}>I.F.:51708439-ICE:003003499000049-Numéro TVA:51708430</p>
-                    </div >
+                    <div style={{ marginTop: "35%" }}>
+                        <div style={{ textAlign: "center" }}>
+                            <p style={{ lineHeight: "2px", fontSize: "15px" }}>Capital de 10 000 MAD-R.C.:25271-Patente:49704138</p>
+                            <p style={{ lineHeight: "2px", fontSize: "15px" }}>I.F.:51708439-ICE:003003499000049-Numéro TVA:51708430</p>
+                        </div >
+                    </div>
                 </div>
             </>
         );
