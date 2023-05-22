@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import NP from "../nosprojet/NP";
 
+import Contact from "../contact/contact";
+
 function Home() {
     const [page, setpage] = useState(0);
 
@@ -21,43 +23,55 @@ function Home() {
                 <>
                     <div>
                         <div>
-                            <NavBar go={custpage}></NavBar>
+                            <NavBar current={page} go={custpage}></NavBar>
                         </div>
                         <div className="introCentre">
                             <FirstContent
-                            next={custpage}
+                                next={custpage}
                             ></FirstContent>
                         </div>
                     </div>
                 </>
-            )
+            );
         case 1://calculator
             return (
                 <>
-                
+
                     <div>
                         <div>
-                            <NavBar go={custpage}></NavBar>
+                            <NavBar curent={page} go={custpage}></NavBar>
                         </div>
-                        <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow dont-print" onClick={()=> custpage(0)} title="Home page"></FontAwesomeIcon></div>
+                        <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow dont-print" onClick={() => custpage(0)} title="Home page"></FontAwesomeIcon></div>
                         <div className="body-calcul">
                             <Calculator ></Calculator>
                         </div>
                     </div>
                 </>
-            )
+            );
         case 2:
-            return(
+            return (
                 <div>
+                    <div>
+                        <NavBar go={custpage}></NavBar>
+                    </div>
+                    <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow dont-print" onClick={() => custpage(0)} title="Home page"></FontAwesomeIcon></div>
+                    <div className="body-calcul">
+                        <NP></NP>
+                    </div>
+                </div>
+            );
+        case 3:
+            return (
                 <div>
-                    <NavBar go={custpage}></NavBar>
-                </div>
-                <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow dont-print" onClick={()=> custpage(0)} title="Home page"></FontAwesomeIcon></div>
-                <div className="body-calcul">
-                    <NP></NP>
-                </div>
-            </div>
-            )
+                    <div>
+                        <NavBar curent={page} go={custpage}></NavBar>
+                    </div>
+                    <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow dont-print" onClick={() => custpage(0)} title="Home page"></FontAwesomeIcon></div>
+                    <div className="body-calcul">
+                        <Contact></Contact>
+                    </div>
+                </div >
+            );
     }
 
 }

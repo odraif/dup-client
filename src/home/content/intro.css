@@ -2,6 +2,30 @@
     padding-right: 10px;
     width: 50%;
     z-index: 3;
+    animation-name: image;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes image{
+  0%{
+    filter: drop-shadow(0 0 5px #005661);
+  }
+  50%{
+    filter: drop-shadow(0 0 8px #026583);
+  }
+  100%{
+    filter: drop-shadow(0 0 5px #005974);
+  }
+}
+
+.introCentre img:hover {
+  padding-right: 10px;
+  width: 50%;
+  z-index: 3;
+  animation-name: none;
+  filter: drop-shadow(0 0 5px #03a59d);
 }
 
 .introBtn {
