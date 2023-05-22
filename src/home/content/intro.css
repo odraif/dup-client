@@ -6,27 +6,28 @@
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+    /* filter: drop-shadow(0 0 4px #03a59d); */
 }
 
-@keyframes image{
+/* @keyframes image{
   0%{
-    filter: drop-shadow(0 0 5px #005661);
+    filter: drop-shadow(0 0 5px #515555);
   }
   50%{
-    filter: drop-shadow(0 0 8px #026583);
+    filter: drop-shadow(0 0 8px #7d8183);
   }
   100%{
-    filter: drop-shadow(0 0 5px #005974);
+    filter: drop-shadow(0 0 5px #53585a);
   }
-}
+} */
 
-.introCentre img:hover {
+/* .introCentre img:hover {
   padding-right: 10px;
   width: 50%;
   z-index: 3;
   animation-name: none;
   filter: drop-shadow(0 0 5px #03a59d);
-}
+} */
 
 .introBtn {
     width: 30%;
