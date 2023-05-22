@@ -4,6 +4,7 @@
     transform:translate(13%,20%);
     width: 80%;
     height: 80%;
+    margin-bottom: 100px;
     background-color: rgba(107, 106, 106, 0.322);
     border-radius: 12px;
     backdrop-filter: blur(10px);
@@ -70,5 +71,10 @@
     .groupbtn{
         display: flex;
         flex-direction: column-reverse;
+    }
+    .body-calcul{
+        width: 80%;
+        height: 90%;
+
     }
 }

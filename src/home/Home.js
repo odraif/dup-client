@@ -8,6 +8,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import NP from "../nosprojet/NP";
 
 import Contact from "../contact/contact";
+import About from "../about/about";
 
 function Home() {
     const [page, setpage] = useState(0);
@@ -71,6 +72,20 @@ function Home() {
                         <Contact></Contact>
                     </div>
                 </div >
+            );
+        case 4:
+            return (
+                <>
+                    <div>
+                        <div>
+                            <NavBar curent={page} go={custpage}></NavBar>
+                        </div>
+                        <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow dont-print" onClick={() => custpage(0)} title="Home page"></FontAwesomeIcon></div>
+                        <div className="body-calcul">
+                            <About></About>
+                        </div>
+                    </div >
+                </>
             );
     }
 

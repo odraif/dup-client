@@ -1,0 +1,39 @@
+.aboutcontent{
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    padding: 10px;
+}
+.aboutpara{
+    text-align: justify;
+    text-indent: 20px;
+    padding: 10px;
+    border: 1px solid #01b1be;
+    border-radius: 8px;
+    width: 70%;
+    margin: auto;
+}
+.aboutheader{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.aboutname{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.aboutlogo{
+    width: 80px;
+}
+.aboutbar{
+    background-color: #fff;
+    width: 2px;
+    margin: 10px;
+}
+.aboutbutton{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 2%;
+}

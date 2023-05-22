@@ -6,7 +6,7 @@
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    /* filter: drop-shadow(0 0 4px #03a59d); */
+    filter: drop-shadow(0 0 5px #075376);
 }
 
 /* @keyframes image{
