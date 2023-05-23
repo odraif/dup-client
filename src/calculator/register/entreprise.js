@@ -4,6 +4,7 @@ import "../style/form.css";
 import { useForm } from 'react-hook-form';
 import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
+import axios from 'axios';
 
 const customTheme = (outerTheme) =>
     createTheme({
@@ -77,7 +78,15 @@ const Entreprise = (props) => {
 
     const onSubmit = async (data) => {
         await userdata(data);
-        await next();
+        try {
+            const response = await axios.post('http://localhost:8000/api/entreprise/store', data);
+            // Handle the response data here
+            console.log(response.data);
+          } catch (error) {
+            // Handle error
+            console.error(error);
+          }
+          await next();
     };
     const outerTheme = useTheme();
     const inputStyles = {
@@ -102,6 +111,9 @@ const Entreprise = (props) => {
                         </div>
                         <div className="group">
                             <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("ICE", { pattern: /^[0-9]+$/i })} label="ICE" variant="standard" required margin="dense" />
+                        </div>
+                        <div className="group">
+                            <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("Email")} label="Email" type='email' variant="standard" required margin="dense" />
                         </div>
                         <div className="group">
                             <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("Adresse")} label="Adresse" variant="standard" required margin="dense" />

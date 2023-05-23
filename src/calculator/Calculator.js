@@ -8,6 +8,7 @@ import Services from './wedget/Services';
 import Logo from "../home/nav/logo.png"
 import "./style/tableCalcul.css"
 import Type from './register/type';
+import axios from 'axios';
 
 
 function Calculator() {
@@ -53,6 +54,10 @@ function Calculator() {
 
     const handleData = (data) => {
         setFormData(data);
+        console.log("the data:");
+        console.log(formData);
+        //console.log(formData)
+        //console.log(userData)
     };
 
     const addprice = (val) => {
@@ -96,6 +101,21 @@ function Calculator() {
         const time = String(hour) + ":" + String(minute) + ":" + String(seconds);
         const Slice = String(year).slice(2, 4)
         const dstime = Slice + String(month + 1) + "- 020";
+
+        useEffect(()=>{
+              async function fetchData() {
+                try {
+                    await axios.post('http://localhost:8000/api/demande/store', formData);
+                    // Handle the response data here
+                    
+                  } catch (error) {
+                    // Handle error 
+                    console.error(error);
+                  }
+              }
+              fetchData();
+        },[]);
+
 
         return (
             <>
@@ -323,6 +343,9 @@ function Calculator() {
                     <Services
                         data={handleData}
                         next={next}
+                        userEmail={userData.Email}
+                        formData={formData}
+                        total={cout}
                         prices={addprice}
                         oldprices={price}
                         updatePrice={updatePrice}

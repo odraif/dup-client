@@ -1,6 +1,6 @@
 .introCentre img {
     padding-right: 10px;
-    width: 50%;
+    width: 40%;
     z-index: 3;
     animation-name: image;
     animation-duration: 500ms;
@@ -9,25 +9,25 @@
     filter: drop-shadow(0 0 5px #075376);
 }
 
-/* @keyframes image{
+@keyframes image{
   0%{
-    filter: drop-shadow(0 0 5px #515555);
+    filter: drop-shadow(0 0 5px #03a59d);
   }
   50%{
-    filter: drop-shadow(0 0 8px #7d8183);
+    filter: drop-shadow(0 0 8px #05c7bd);
   }
   100%{
-    filter: drop-shadow(0 0 5px #53585a);
+    filter: drop-shadow(0 0 5px #03a59d);
   }
-} */
+}
 
-/* .introCentre img:hover {
+.introCentre img:hover {
   padding-right: 10px;
-  width: 50%;
+  width: 40%;
   z-index: 3;
   animation-name: none;
   filter: drop-shadow(0 0 5px #03a59d);
-} */
+}
 
 .introBtn {
     width: 30%;

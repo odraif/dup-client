@@ -54,7 +54,7 @@ function Features(props) {
 
     const { data, next, prices, oldprices, updatePrice } = props;
     const [selectedItems, setSelectedItems] = useState([]);
-    const[button,setbutton] = useState(true)
+    const[button,setbutton] = useState(false)
 
 
 

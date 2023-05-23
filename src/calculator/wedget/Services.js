@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBarsProgress, faBook, faCashRegister, faCommentSms, faFileInvoiceDollar, faLink } from "@fortawesome/free-solid-svg-icons";
 import Data from "../data/formComponent.json"
 
+
 function Services(props) {
     library.add(
         faCommentSms,
@@ -15,9 +16,9 @@ function Services(props) {
         faCashRegister
     );
 
-    const { data, next, prices, oldprices, updatePrice } = props;
+    const {total,userEmail, data, next, prices, oldprices, updatePrice } = props;
     const [selectedItems, setSelectedItems] = useState([]);
-    const [button, setbutton] = useState(true)
+    const [button, setbutton] = useState(false)
 
 
 
@@ -50,9 +51,11 @@ function Services(props) {
         await data((prevChildData) => ({
             ...prevChildData,
             Services: selectedItems,
+            Email: userEmail,
+            Cout: total,
         }));
-        await show.classList.add("cardout");
 
+        await show.classList.add("cardout");
         await setTimeout(() => {
             next();
         }, 1000);

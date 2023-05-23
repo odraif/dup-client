@@ -1,6 +1,7 @@
 import React from "react";
 import Button from '@mui/material/Button';
-import Pic from "./circuit-icon-png-18.png";
+// import Pic from "./circuit-icon-png-18.png";
+import logo from "../nav/logo.png";
 import "./intro.css";
 
 
@@ -14,7 +15,7 @@ export default function FirstContent(props) {
     return (
         <>
             <div className="introCentre" >
-                <img src={Pic} alt="digital marketing" />
+                <img src={logo} alt="digital marketing" />
                 <div className="introBtn">
                     <Button
                         variant="contained"

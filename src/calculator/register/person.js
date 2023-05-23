@@ -5,6 +5,7 @@ import "../style/form.css";
 import { useForm } from 'react-hook-form';
 import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
+import axios from 'axios';
 
 const customTheme = (outerTheme) =>
     createTheme({
@@ -77,9 +78,16 @@ function Person(props) {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
-
         await userdata(data);
-        await next();
+        try {
+            const response = await axios.post('http://localhost:8000/api/personnel/store', data);
+            // Handle the response data here
+            console.log(response.data);
+          } catch (error) {
+            // Handle error
+            console.error(error);
+          }
+          await next();
     };
     const outerTheme = useTheme();
     const inputStyles = {
@@ -98,16 +106,13 @@ function Person(props) {
                             <TextField id="filled-basic"  inputProps={{ style: inputStyles }} {...register("Prenom", { pattern: /^[A-Za-z\s]+$/i })} label="Prénom" variant="standard" required margin="dense" />
                         </div>
                         <div className="group">
-                            <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("CIN")} label="CIN" variant="standard" required margin="dense" />
-                        </div>
-                        <div className="group">
                             <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("Email")} label="Email" type='email' variant="standard" required margin="dense" />
                         </div>
                         <div className="group">
                             <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("NumTel", { pattern: /^[0-9]+$/i })} title='only numbers' label="Numero de telephone" variant="standard" required margin="dense" />
                         </div>
                         <div className="group">
-                            <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("Adresse")} label="Adresse" variant="standard" margin="dense" />
+                            <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("Ville")} label="Ville" variant="standard" margin="dense" />
                         </div>
                         <div className='groupbtn'>
                             <button onClick={()=> back(0)} className='autbtn'>Présedent</button>
