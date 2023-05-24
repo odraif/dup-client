@@ -21,13 +21,6 @@
   }
 }
 
-.introCentre img:hover {
-  padding-right: 10px;
-  width: 40%;
-  z-index: 3;
-  animation-name: none;
-  filter: drop-shadow(0 0 5px #03a59d);
-}
 
 .introBtn {
     width: 30%;

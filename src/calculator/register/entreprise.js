@@ -73,7 +73,7 @@ const customTheme = (outerTheme) =>
     });
 
 const Entreprise = (props) => {
-    const { back,next, userdata } = props;
+    const { back, next, userdata } = props;
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
@@ -82,16 +82,16 @@ const Entreprise = (props) => {
             const response = await axios.post('http://localhost:8000/api/entreprise/store', data);
             // Handle the response data here
             console.log(response.data);
-          } catch (error) {
+        } catch (error) {
             // Handle error
             console.error(error);
-          }
-          await next();
+        }
+        await next();
     };
     const outerTheme = useTheme();
     const inputStyles = {
         color: 'white', // Set your desired input color here
-      };
+    };
     return (
         <div className='view-card'>
             <div className="container ">
@@ -128,8 +128,8 @@ const Entreprise = (props) => {
                             <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("ResponsableServie")} label="Responsable du service" variant="standard" required margin="dense" />
                         </div>
                         <div className='groupbtn'>
-                            <button onClick={()=> back(0)} className='autbtn'>Présedent</button>
-                            <input type="submit" value="Suivant" className='btn'/>
+                            <button onClick={() => back(0)} className='autbtn'>Présedent</button>
+                            <input type="submit" value="Suivant" className='btn' />
                         </div>
                     </ThemeProvider>
                 </form>

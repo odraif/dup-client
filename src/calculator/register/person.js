@@ -74,8 +74,9 @@ const customTheme = (outerTheme) =>
     });
 
 function Person(props) {
-    const { back,next, userdata } = props;
+    const { back, next, userdata } = props;
     const { register, handleSubmit } = useForm();
+
 
     const onSubmit = async (data) => {
         await userdata(data);
@@ -83,16 +84,16 @@ function Person(props) {
             const response = await axios.post('http://localhost:8000/api/personnel/store', data);
             // Handle the response data here
             console.log(response.data);
-          } catch (error) {
+        } catch (error) {
             // Handle error
             console.error(error);
-          }
-          await next();
+        }
+        await next();
     };
     const outerTheme = useTheme();
     const inputStyles = {
         color: 'white', // Set your desired input color here
-      };
+    };
 
     return (
         <>
@@ -103,7 +104,7 @@ function Person(props) {
                             <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("Nom", { pattern: /^[A-Za-z\s]+$/i })} label="Nom" variant="standard" required margin="dense" />
                         </div>
                         <div className="group">
-                            <TextField id="filled-basic"  inputProps={{ style: inputStyles }} {...register("Prenom", { pattern: /^[A-Za-z\s]+$/i })} label="Prénom" variant="standard" required margin="dense" />
+                            <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("Prenom", { pattern: /^[A-Za-z\s]+$/i })} label="Prénom" variant="standard" required margin="dense" />
                         </div>
                         <div className="group">
                             <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("Email")} label="Email" type='email' variant="standard" required margin="dense" />
@@ -115,7 +116,7 @@ function Person(props) {
                             <TextField id="filled-basic" inputProps={{ style: inputStyles }} {...register("Ville")} label="Ville" variant="standard" margin="dense" />
                         </div>
                         <div className='groupbtn'>
-                            <button onClick={()=> back(0)} className='autbtn'>Présedent</button>
+                            <button onClick={() => back(0)} className='autbtn'>Présedent</button>
                             <input type="submit" value="Suivant" className='btn' />
                         </div>
                     </ThemeProvider>

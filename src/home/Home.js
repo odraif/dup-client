@@ -82,7 +82,7 @@ function Home() {
                         </div>
                         <div ><FontAwesomeIcon icon={faArrowLeft} className="back-arrow dont-print" onClick={() => custpage(0)} title="Home page"></FontAwesomeIcon></div>
                         <div className="body-calcul">
-                            <About></About>
+                            <About go={custpage}></About>
                         </div>
                     </div >
                 </>

@@ -2,7 +2,8 @@ import React from 'react';
 import logo from "../home/nav/logo.png";
 import "./style.css"
 
-const About = () => {
+const About = (props) => {
+    const {go}=props;
     return (
         <div className='aboutcontent'>
             <div className='aboutheader'> 
@@ -30,7 +31,7 @@ const About = () => {
                 </p>
             </div>
             <div className='aboutbutton'>
-                <button className='btn'>Contact-nous</button>
+                <button className='btn' onClick={()=>go(3)}>Contact-nous</button>
             </div>
         </div>
     );
