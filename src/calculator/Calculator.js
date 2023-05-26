@@ -9,6 +9,7 @@ import Logo from "../home/nav/logo.png"
 import "./style/tableCalcul.css"
 import Type from './register/type';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 
 function Calculator() {
@@ -41,11 +42,24 @@ function Calculator() {
 
     }, [price]);
 
-    const handleReset = async () => {
-        await setFormData(init);
-        await setprice([]);
-        await setcout(0);
-        await setCurrentStep(1);
+    const handleReset =  () => {
+        Swal.fire({
+            title: 'Vous êtes sûr?',
+            text: "êtes-vous sûr de vouloir initialisez la calculateur?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Effacer',
+            cancelButtonText:"Annueller"
+          }).then(async (result) => {
+            if (result.isConfirmed) {
+                await setFormData(init);
+                await setprice([]);
+                await setcout(0);
+                await setCurrentStep(1);
+            }
+          })
     }
 
     const handleUserData = (data) => {
@@ -116,6 +130,11 @@ function Calculator() {
               fetchData();
         },[]);
 
+        Swal.fire(
+            'Votre demande à été envoyer avec succes',
+            "Ne oublie pas d'imprimer le devis",
+            'success'
+          )
 
         return (
             <>
@@ -252,7 +271,7 @@ function Calculator() {
                         <p>
                             {"Le cout: " + cout}DH
                         </p>
-                        <button onClick={handleReset} className="autbtn">reset</button>
+                        <button onClick={handleReset} className="autbtn">Effacer</button>
                     </div>
                 </>
             );
@@ -271,7 +290,7 @@ function Calculator() {
                         <p>
                             {"Le cout: " + cout}DH
                         </p>
-                        <button onClick={handleReset} className="autbtn">reset</button>
+                        <button onClick={handleReset} className="autbtn">Effacer</button>
                     </div>
                 </>
             );
@@ -290,7 +309,7 @@ function Calculator() {
                         <p>
                             {"Le cout: " + cout}DH
                         </p>
-                        <button onClick={handleReset} className="autbtn">reset</button>
+                        <button onClick={handleReset} className="autbtn">Effacer</button>
                     </div>
                 </>
             );
@@ -309,7 +328,7 @@ function Calculator() {
                         <p>
                             {"Le cout: " + cout}DH
                         </p>
-                        <button onClick={handleReset} className="autbtn">reset</button>
+                        <button onClick={handleReset} className="autbtn">Effacer</button>
                     </div>
                 </>
             );
@@ -330,7 +349,7 @@ function Calculator() {
                         <p>
                             {"Le cout: " + cout}DH
                         </p>
-                        <button onClick={handleReset} className="autbtn">reset</button>
+                        <button onClick={handleReset} className="autbtn">Effacer</button>
                     </div>
                 </>
             );
@@ -354,7 +373,7 @@ function Calculator() {
                         <p>
                             {"Le cout: " + cout}DH
                         </p>
-                        <button onClick={handleReset} className="autbtn">reset</button>
+                        <button onClick={handleReset} className="autbtn">Effacer</button>
                     </div>
                 </>
             );

@@ -93,7 +93,7 @@ const Entreprise = (props) => {
         color: 'white', // Set your desired input color here
     };
     return (
-        <div className='view-card'>
+        <div>
             <div className="container ">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <ThemeProvider theme={customTheme(outerTheme)}>
