@@ -71,6 +71,7 @@ td {
     height: 1100px;
     width: 700px;
     margin-top: -100px;
+    margin-left: 0;
     padding: 0;
   }
 }
