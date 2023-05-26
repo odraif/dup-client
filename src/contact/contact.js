@@ -8,19 +8,18 @@ import axios from 'axios';
 
 export default function BasicTextFields() {
   const { register, handleSubmit } = useForm();
-
+  document.title = "Contact";
   const onSubmit = async (data) => {
     var btn = document.getElementById('submitButton');
 
     try {
-      //       await btn.addEventListener("click",()=>{
-      //    btn.style.backgroundColor="#04aa6d";
-      //    btn.value = "ok"
-      // });
+
+      btn.value = "chargement..."
+      btn.disabled = true;
       const response = await axios.post('http://localhost:8000/api/message/store', data).then(
         () => {
           btn.style.backgroundColor = "#04aa6d";
-          btn.value = "ok"
+          btn.value = "succès"
           btn.disabled = true;
         }
       ).catch(() => {
