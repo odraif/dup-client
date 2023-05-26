@@ -186,8 +186,10 @@ function Calculator() {
                             <th>TTC</th>
                         </tr>
                         {Object.keys(formData).map((key) => (
-                            <>
-                                <tr key={key}>
+                            <>{
+                                key === "Email" || key === "Cout"? "":
+                                (
+                                    <tr key={key}>
                                     <th>{key}</th>
                                     <td style={{ lineHeight: "17px" }}>
                                         {Array.isArray(formData[key])
@@ -215,6 +217,9 @@ function Calculator() {
                                     </td>
                                 </tr>
 
+                                )
+                            }
+                                
                             </>
                         ))}
                         <tr>
@@ -231,7 +236,7 @@ function Calculator() {
 
                             <td style={{ border: "none" }}><p>{(Number(cout) - (Number(cout) / 1.2)).toFixed(2)}</p></td>
                         </tr>
-                        <tr>
+                        <tr style={{backgroundColor: "#fff"}}>
                             <td style={{ border: "none" }}></td>
                             <td style={{ border: "none" }}></td>
                             <td style={{ border: "none" }} colSpan="2"><p>Total TTC </p></td>

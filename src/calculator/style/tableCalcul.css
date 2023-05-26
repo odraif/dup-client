@@ -21,6 +21,7 @@ td {
 .printable-section {
   overflow-y: auto;
   height: 80%;
+  
 }
 .cout-viewer{
   display: flex;
@@ -46,6 +47,13 @@ td {
   .cout-viewer{
     width: 85%;
     margin-top: 15%;
+  }
+  .printable-section{
+    transform: scale(0.5);
+    width: 200%;
+    height: 100%;
+    margin-left: -55%;
+    margin-top: -45%;
   }
 }
 
