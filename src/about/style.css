@@ -10,9 +10,11 @@
     text-indent: 20px;
     padding: 10px;
     border: 1px solid #01b1be;
-    border-radius: 8px;
     width: 70%;
     margin: auto;
+    background-color: rgba(107, 106, 106, 0.322);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
 }
 .aboutheader{
     display: flex;

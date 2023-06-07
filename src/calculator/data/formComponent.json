@@ -1,7 +1,7 @@
 {
     "platforms": [
         {
-            "id": 1,
+            "id": 101,
             "name": "Platform",
             "value": "Web",
             "price": 400,
@@ -9,7 +9,7 @@
             "type": "fas"
         },
         {
-            "id": 2,
+            "id": 102,
             "name": "Platform",
             "value": "Android",
             "price": 300,
@@ -17,7 +17,7 @@
             "type": "fab"
         },
         {
-            "id": 3,
+            "id": 103,
             "name": "Platform",
             "value": "Apple",
             "price": 300,
@@ -251,7 +251,7 @@
     ],
     "Services": [
         {
-            "id": 1,
+            "id": 201,
             "name": "Services",
             "value": "SMS Mailing",
             "price": 400,
@@ -259,7 +259,7 @@
             "type": "fas"
         },
         {
-            "id": 2,
+            "id": 202,
             "name": "Services",
             "value": "API",
             "price": 300,
@@ -267,7 +267,7 @@
             "type": "fas"
         },
         {
-            "id": 3,
+            "id": 203,
             "name": "Services",
             "value": "CRM",
             "price": 300,
